@@ -43,14 +43,7 @@ public class OctoRockScript : MonoBehaviour
     private float knockbackTimer = 0f;
     private Rigidbody2D rb;
 
-    [SerializeField] private float pauseDuration = 0.5f; // Durée de la pause en secondes
-
-    [Header("Direction Sprites")]
-    [SerializeField] private Sprite frontSprite;
-    [SerializeField] private Sprite backSprite;
-    [SerializeField] private Sprite leftSprite;
-    [SerializeField] private Sprite rightSprite;
-
+    [SerializeField] private float pauseDuration = 0.5f; // Durée de la pause en seconde
     private bool isPlayingAnimation = false;
 
     void Start()
@@ -97,7 +90,7 @@ public class OctoRockScript : MonoBehaviour
             animator.SetBool(IsEmerging, false);
             hasEmerged = false;
             canShoot = false;
-            spriteRenderer.sprite = GetComponent<SpriteRenderer>().sprite;
+            animator.SetBool(IsEmerging, false);
             return;
         }
 
