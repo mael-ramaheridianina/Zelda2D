@@ -46,6 +46,11 @@ public class OctoRockScript : MonoBehaviour
     [SerializeField] private float pauseDuration = 0.5f; // Durée de la pause en seconde
     private bool isPlayingAnimation = false;
 
+    [Header("Animation Settings")]
+    [SerializeField] private float timeBeforeHide = 2f;
+    private float noShootTimer = 0f;
+    private EmergingDirection lastEmergingDirection;
+
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -110,8 +115,21 @@ public class OctoRockScript : MonoBehaviour
             {
                 // Arrêter l'animation de tir si le joueur n'est plus dans la bonne direction
                 animator.SetBool(IsShootingHash, false);
+                noShootTimer += Time.deltaTime;
+            
+                // Vérifie si l'Octorok a émergé en bas et n'a pas tiré depuis 2 secondes
+                if (noShootTimer >= timeBeforeHide && lastEmergingDirection == EmergingDirection.Down)
+                {
+                    animator.Play("Octorok_RentreDansLaTerre_Bas");
+                    hasEmerged = false;
+                    canShoot = false;
+                    noShootTimer = 0f;
+                }
                 return;
             }
+
+            // Réinitialise le timer quand l'Octorok tire
+            noShootTimer = 0f;
 
             shootTimer += Time.deltaTime;
             if (shootTimer >= shootDelay)
@@ -132,6 +150,8 @@ public class OctoRockScript : MonoBehaviour
         hasEmerged = true;
         canShoot = true;
         shootTimer = shootDelay; // Pour tirer immédiatement après l'émergence
+
+        lastEmergingDirection = direction; // Stocke la direction d'émergence
 
         Debug.Log("OctoRock emerged from the ground!");
         Debug.Log($"Emerging direction: {direction}");
