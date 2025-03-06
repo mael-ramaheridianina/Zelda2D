@@ -318,4 +318,11 @@ public class OctoRockScript : MonoBehaviour
                 return false;
         }
     }
+
+    public void OnReturnToGroundComplete()
+    {
+        animator.SetBool(IsEmerging, false);
+        hasEmerged = false;
+        canShoot = false;
+    }
 }
