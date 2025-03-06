@@ -288,10 +288,8 @@ public class OctoRockScript : MonoBehaviour
         float angle = Mathf.Atan2(directionToPlayer.y, directionToPlayer.x) * Mathf.Rad2Deg;
         if (angle < 0) angle += 360;
 
-        // Récupérer la direction actuelle de l'Octorok
         EmergingDirection currentDirection = (EmergingDirection)animator.GetInteger(DirectionHash);
 
-        // Vérifier si le joueur est dans la bonne direction
         switch (currentDirection)
         {
             case EmergingDirection.Down:
@@ -301,7 +299,8 @@ public class OctoRockScript : MonoBehaviour
             case EmergingDirection.Left:
                 return angle >= 135 && angle < 225;
             case EmergingDirection.Right:
-                return angle >= 315 || angle < 45;
+                // Modification ici pour gérer correctement l'angle à droite
+                return (angle >= 315) || (angle < 45);
             default:
                 return false;
         }
