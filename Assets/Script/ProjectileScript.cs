@@ -43,7 +43,15 @@ public class ProjectileScript : MonoBehaviour
             
             if (player != null && heartManager != null)
             {
+                // Infliger les dégâts
                 heartManager.TakeDamage(1);
+                
+                // Calculer la direction du knockback (du projectile vers le joueur)
+                Vector2 knockbackDirection = (other.transform.position - transform.position).normalized;
+                
+                // Appliquer le knockback et l'invulnérabilité
+                player.StartKnockback(knockbackDirection);
+                player.StartInvulnerability();
             }
             Destroy(gameObject);
         }
