@@ -113,17 +113,27 @@ public class OctoRockScript : MonoBehaviour
         {
             if (!IsPlayerInShootingDirection())
             {
-                // Arrêter l'animation de tir si le joueur n'est plus dans la bonne direction
                 animator.SetBool(IsShootingHash, false);
                 noShootTimer += Time.deltaTime;
-            
-                // Vérifie si l'Octorok a émergé en bas et n'a pas tiré depuis 2 secondes
-                if (noShootTimer >= timeBeforeHide && lastEmergingDirection == EmergingDirection.Down)
+
+                // Vérifie la direction d'émergence et joue l'animation correspondante
+                if (noShootTimer >= timeBeforeHide)
                 {
-                    animator.Play("Octorok_RentreDansLaTerre_Bas");
-                    hasEmerged = false;
-                    canShoot = false;
-                    noShootTimer = 0f;
+                    string animationName = lastEmergingDirection switch
+                    {
+                        EmergingDirection.Down => "Octorok_RentreDansLaTerre_Bas",
+                        EmergingDirection.Up => "Octorok_RentreDansLaTerre_Haut",
+                        EmergingDirection.Right => "Octorok_RentreDansLaTerre_Droite",
+                        _ => null
+                    };
+
+                    if (animationName != null)
+                    {
+                        animator.Play(animationName);
+                        hasEmerged = false;
+                        canShoot = false;
+                        noShootTimer = 0f;
+                    }
                 }
                 return;
             }
