@@ -124,6 +124,7 @@ public class OctoRockScript : MonoBehaviour
                         EmergingDirection.Down => "Octorok_RentreDansLaTerre_Bas",
                         EmergingDirection.Up => "Octorok_RentreDansLaTerre_Haut",
                         EmergingDirection.Right => "Octorok_RentreDansLaTerre_Droite",
+                        EmergingDirection.Left => "Octorok_RentreDansLaTerre_Gauche",
                         _ => null
                     };
 
