@@ -6,6 +6,11 @@ public class GelScript : MonoBehaviour
     [SerializeField] private float jumpForce = 5f;
     [SerializeField] private float detectionRange = 5f;
     
+    [Header("Combat Settings")]
+    [SerializeField] private int damageAmount = 1;
+    [SerializeField] private float knockbackForce = 5f;
+    [SerializeField] private float knockbackDuration = 0.2f;
+
     private Transform playerTransform;
     private Animator animator;
     private Rigidbody2D rb;
@@ -50,6 +55,28 @@ public class GelScript : MonoBehaviour
         isJumping = false;
         animator.SetBool(IsJumpingHash, false);
         rb.linearVelocity = Vector2.zero;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            PlayerScript player = collision.gameObject.GetComponent<PlayerScript>();
+            HeartManager heartManager = FindFirstObjectByType<HeartManager>();
+            
+            if (player != null && heartManager != null)
+            {
+                // Infliger les dégâts
+                heartManager.TakeDamage(damageAmount);
+                
+                // Calculer la direction du knockback (du Gel vers le joueur)
+                Vector2 knockbackDirection = (collision.transform.position - transform.position).normalized;
+                
+                // Appliquer le knockback et l'invulnérabilité
+                player.StartKnockback(knockbackDirection);
+                player.StartInvulnerability();
+            }
+        }
     }
 
     private void OnDrawGizmosSelected()
