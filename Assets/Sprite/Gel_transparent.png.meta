@@ -1,0 +1,2755 @@
+fileFormatVersion: 2
+guid: b649b24d422b1d3468553b95eb7df824
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6037287632851492043
+    second: Gel_transparent_0
+  - first:
+      213: -1580183134558388406
+    second: Gel_transparent_1
+  - first:
+      213: -7780448821987696726
+    second: Gel_transparent_2
+  - first:
+      213: -197175862187609272
+    second: Gel_transparent_3
+  - first:
+      213: 6491719534516776860
+    second: Gel_transparent_4
+  - first:
+      213: -1322491318985640961
+    second: Gel_transparent_5
+  - first:
+      213: -5688388971929807143
+    second: Gel_transparent_6
+  - first:
+      213: 9137669132610408838
+    second: Gel_transparent_7
+  - first:
+      213: -7430574073725218260
+    second: Gel_transparent_8
+  - first:
+      213: 2755916824262104120
+    second: Gel_transparent_9
+  - first:
+      213: -7101512824624445274
+    second: Gel_transparent_10
+  - first:
+      213: 2430131120610574010
+    second: Gel_transparent_11
+  - first:
+      213: 849866190319811616
+    second: Gel_transparent_12
+  - first:
+      213: 6435070703562234076
+    second: Gel_transparent_13
+  - first:
+      213: 6805784676161456289
+    second: Gel_transparent_14
+  - first:
+      213: 3856832151696041030
+    second: Gel_transparent_15
+  - first:
+      213: -8144923687038110988
+    second: Gel_transparent_16
+  - first:
+      213: 1335459133589156619
+    second: Gel_transparent_17
+  - first:
+      213: -6136447730509950232
+    second: Gel_transparent_18
+  - first:
+      213: 9045856583570196983
+    second: Gel_transparent_19
+  - first:
+      213: -6529439787103224943
+    second: Gel_transparent_20
+  - first:
+      213: 7710527168571586681
+    second: Gel_transparent_21
+  - first:
+      213: -719718448928381906
+    second: Gel_transparent_22
+  - first:
+      213: 555629998779194132
+    second: Gel_transparent_23
+  - first:
+      213: 5176937534244410091
+    second: Gel_transparent_24
+  - first:
+      213: 4376127830076413090
+    second: Gel_transparent_25
+  - first:
+      213: -7583464844141350826
+    second: Gel_transparent_26
+  - first:
+      213: 4102901203434314000
+    second: Gel_transparent_27
+  - first:
+      213: 3250156329284187
+    second: Gel_transparent_28
+  - first:
+      213: -8293713916691852990
+    second: Gel_transparent_29
+  - first:
+      213: -1781376282880216291
+    second: Gel_transparent_30
+  - first:
+      213: 3741478794723794296
+    second: Gel_transparent_31
+  - first:
+      213: 2489551773289436036
+    second: Gel_transparent_32
+  - first:
+      213: -6634660219029575624
+    second: Gel_transparent_33
+  - first:
+      213: 5081562353371313715
+    second: Gel_transparent_34
+  - first:
+      213: -4980009528889520857
+    second: Gel_transparent_35
+  - first:
+      213: -592809547274510054
+    second: Gel_transparent_36
+  - first:
+      213: -1413112374447982021
+    second: Gel_transparent_37
+  - first:
+      213: 7074747333035969189
+    second: Gel_transparent_38
+  - first:
+      213: 3025776994569653115
+    second: Gel_transparent_39
+  - first:
+      213: -4071921424642475259
+    second: Gel_transparent_40
+  - first:
+      213: -2082665512875405611
+    second: Gel_transparent_41
+  - first:
+      213: -1121555353704238284
+    second: Gel_transparent_42
+  - first:
+      213: 7188764442367312554
+    second: Gel_transparent_43
+  - first:
+      213: -4572458444962116907
+    second: Gel_transparent_44
+  - first:
+      213: 6490967281214161329
+    second: Gel_transparent_45
+  - first:
+      213: 5031205368298904730
+    second: Gel_transparent_46
+  - first:
+      213: -683118661707429689
+    second: Gel_transparent_47
+  - first:
+      213: 868751219074211858
+    second: Gel_transparent_48
+  - first:
+      213: 950474432969941311
+    second: Gel_transparent_49
+  - first:
+      213: -8051431858111506699
+    second: Gel_transparent_50
+  - first:
+      213: 5365892443840878329
+    second: Gel_transparent_51
+  - first:
+      213: 2781313845139151754
+    second: Gel_transparent_52
+  - first:
+      213: -4421948289551492741
+    second: Gel_transparent_53
+  - first:
+      213: 5785892388237613518
+    second: Gel_transparent_54
+  - first:
+      213: 4473287339837128604
+    second: Gel_transparent_55
+  - first:
+      213: -3960130671762213611
+    second: Gel_transparent_56
+  - first:
+      213: 5838190603447970868
+    second: Gel_transparent_57
+  - first:
+      213: 3143337624541649176
+    second: Gel_transparent_58
+  - first:
+      213: 448229100016663563
+    second: Gel_transparent_59
+  - first:
+      213: -5715924228896094852
+    second: Gel_transparent_60
+  - first:
+      213: -903977289652230351
+    second: Gel_transparent_61
+  - first:
+      213: 1329246434289982712
+    second: Gel_transparent_62
+  - first:
+      213: -1310556875101647841
+    second: Gel_transparent_63
+  - first:
+      213: 4837612908641292890
+    second: Gel_transparent_64
+  - first:
+      213: -7520318085255808276
+    second: Gel_transparent_65
+  - first:
+      213: 3795066409103907918
+    second: Gel_transparent_66
+  - first:
+      213: 2363865943308180156
+    second: Gel_transparent_67
+  - first:
+      213: -4431281955206915995
+    second: Gel_transparent_68
+  - first:
+      213: -9126263786705269635
+    second: Gel_transparent_69
+  - first:
+      213: 2028014269005575829
+    second: Gel_transparent_70
+  - first:
+      213: 8929717900907872508
+    second: Gel_transparent_71
+  - first:
+      213: 6013016081378159296
+    second: Gel_transparent_72
+  - first:
+      213: 6912741910993376811
+    second: Gel_transparent_73
+  - first:
+      213: 8784423018087990890
+    second: Gel_transparent_74
+  - first:
+      213: 6453214230398220735
+    second: Gel_transparent_75
+  - first:
+      213: -1943471965807896479
+    second: Gel_transparent_76
+  - first:
+      213: -8757605347725957757
+    second: Gel_transparent_77
+  - first:
+      213: 4959895169380592562
+    second: Gel_transparent_78
+  - first:
+      213: -2016005378852864740
+    second: Gel_transparent_79
+  - first:
+      213: -2685485290384046530
+    second: Gel_transparent_80
+  - first:
+      213: 2270523891943837360
+    second: Gel_transparent_81
+  - first:
+      213: -4395614379295339562
+    second: Gel_transparent_82
+  - first:
+      213: 3349307296558175639
+    second: Gel_transparent_83
+  - first:
+      213: -532837915344342486
+    second: Gel_transparent_84
+  - first:
+      213: 8458463744412698577
+    second: Gel_transparent_85
+  - first:
+      213: -3493427049398286763
+    second: Gel_transparent_86
+  - first:
+      213: -1863974349592545720
+    second: Gel_transparent_87
+  - first:
+      213: 6533591378641225240
+    second: Gel_transparent_88
+  - first:
+      213: -3263804472863877446
+    second: Gel_transparent_89
+  - first:
+      213: -3658438495166302970
+    second: Gel_transparent_90
+  - first:
+      213: 5382600490903569743
+    second: Gel_transparent_91
+  - first:
+      213: 4283219780698095354
+    second: Gel_transparent_92
+  - first:
+      213: 6679976128510098044
+    second: Gel_transparent_93
+  - first:
+      213: 4217350878978226458
+    second: Gel_transparent_94
+  - first:
+      213: 5197943476218619338
+    second: Gel_transparent_95
+  - first:
+      213: -3485997075344121197
+    second: Gel_transparent_96
+  - first:
+      213: -7025093566400813753
+    second: Gel_transparent_97
+  - first:
+      213: -2838654235133442120
+    second: Gel_transparent_98
+  - first:
+      213: -6797599745517491639
+    second: Gel_transparent_99
+  - first:
+      213: -5110117396930534165
+    second: Gel_transparent_100
+  - first:
+      213: 7031850728032763702
+    second: Gel_transparent_101
+  - first:
+      213: 4982419282331443911
+    second: Gel_transparent_102
+  - first:
+      213: 7187428876985633357
+    second: Gel_transparent_103
+  - first:
+      213: 3012630079195705665
+    second: Gel_transparent_104
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 26
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Gel_transparent_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 807
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 533270582ee373ca0800000000000000
+      internalID: -6037287632851492043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_1
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 807
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4f7590bfcf021ae0800000000000000
+      internalID: -1580183134558388406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_2
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 807
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aaf115cd40b460490800000000000000
+      internalID: -7780448821987696726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_3
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 807
+        width: 22
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 843b608199d734df0800000000000000
+      internalID: -197175862187609272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_4
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 773
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9f2654a588371a50800000000000000
+      internalID: 6491719534516776860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_5
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 761
+        width: 10
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff3b259f62195ade0800000000000000
+      internalID: -1322491318985640961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_6
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 773
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d6dfdf4e58ce01b0800000000000000
+      internalID: -5688388971929807143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_7
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 777
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6819b44a9a58fce70800000000000000
+      internalID: 9137669132610408838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_8
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 778
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c229162bf3c41e890800000000000000
+      internalID: -7430574073725218260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_9
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 767
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8345aac00cbfe3620800000000000000
+      internalID: 2755916824262104120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_10
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 758
+        width: 28
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a8016026bb527d90800000000000000
+      internalID: -7101512824624445274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_11
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 758
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abe7d99f06f89b120800000000000000
+      internalID: 2430131120610574010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_12
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 758
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02c70ac1cc45bcb00800000000000000
+      internalID: 849866190319811616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_13
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 758
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd8995ed5b6fd4950800000000000000
+      internalID: 6435070703562234076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_14
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 758
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a88668ba11037e50800000000000000
+      internalID: 6805784676161456289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_15
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 719
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 644e5285868368530800000000000000
+      internalID: 3856832151696041030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_16
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 719
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f2bd6f6f0b67fe80800000000000000
+      internalID: -8144923687038110988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_17
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 719
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b03f1a5a101888210800000000000000
+      internalID: 1335459133589156619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_18
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 719
+        width: 22
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e2d3382d45f6daa0800000000000000
+      internalID: -6136447730509950232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_19
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 685
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f984d0c2a6598d70800000000000000
+      internalID: 9045856583570196983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_20
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 673
+        width: 10
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19bf86bab15c265a0800000000000000
+      internalID: -6529439787103224943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_21
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 685
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97835b19b9b410b60800000000000000
+      internalID: 7710527168571586681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_22
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 689
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e24245942eb0306f0800000000000000
+      internalID: -719718448928381906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_23
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 690
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41bd8cf3a8ef5b700800000000000000
+      internalID: 555629998779194132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_24
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 679
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be25601424d28d740800000000000000
+      internalID: 5176937534244410091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_25
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 670
+        width: 28
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a4d76363112bbc30800000000000000
+      internalID: 4376127830076413090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_26
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 670
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 650ba4637ee12c690800000000000000
+      internalID: -7583464844141350826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_27
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 670
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 019993b08ee60f830800000000000000
+      internalID: 4102901203434314000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_28
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 670
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b52b87dfffb8b0000800000000000000
+      internalID: 3250156329284187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_29
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 670
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2415ede722fc6ec80800000000000000
+      internalID: -8293713916691852990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_30
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 455
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d137e9775b74747e0800000000000000
+      internalID: -1781376282880216291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_31
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 455
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87d1b2ef3276ce330800000000000000
+      internalID: 3741478794723794296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_32
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 455
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4835cd8c52aac8220800000000000000
+      internalID: 2489551773289436036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_33
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 455
+        width: 22
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 838a357cea3fce3a0800000000000000
+      internalID: -6634660219029575624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_34
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 421
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 336f1b08906558640800000000000000
+      internalID: 5081562353371313715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_35
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 409
+        width: 10
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72dca7cf7b373eab0800000000000000
+      internalID: -4980009528889520857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_36
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 421
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a112e3b8bdae5c7f0800000000000000
+      internalID: -592809547274510054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_37
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 425
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3ab15d48cd936ce0800000000000000
+      internalID: -1413112374447982021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_38
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 426
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5aa404d373d8e2260800000000000000
+      internalID: 7074747333035969189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_39
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 415
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7b8fd23528bdf920800000000000000
+      internalID: 3025776994569653115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_40
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 406
+        width: 28
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50bf1eac901ad77c0800000000000000
+      internalID: -4071921424642475259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_41
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 406
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5deca1f10c2e813e0800000000000000
+      internalID: -2082665512875405611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_42
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 406
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 433758a195f6f60f0800000000000000
+      internalID: -1121555353704238284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_43
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 406
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa243413c2f93c360800000000000000
+      internalID: 7188764442367312554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_44
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 406
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5da4ccd254d5b80c0800000000000000
+      internalID: -4572458444962116907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_45
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 359
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b104750a5c841a50800000000000000
+      internalID: 6490967281214161329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_46
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 367
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9c9e7140ae62d540800000000000000
+      internalID: 5031205368298904730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_47
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 367
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c80d7d42331586f0800000000000000
+      internalID: -683118661707429689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_48
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 367
+        width: 22
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2102b1381ac6e0c00800000000000000
+      internalID: 868751219074211858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_49
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 333
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f31a3410673c03d00800000000000000
+      internalID: 950474432969941311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_50
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 321
+        width: 10
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f610042261934090800000000000000
+      internalID: -8051431858111506699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_51
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 333
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f6961a7fba777a40800000000000000
+      internalID: 5365892443840878329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_52
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 337
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8b1564c436399620800000000000000
+      internalID: 2781313845139151754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_53
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 338
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b79132a857512a2c0800000000000000
+      internalID: -4421948289551492741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_54
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 327
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec91a8dd87e9b4050800000000000000
+      internalID: 5785892388237613518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_55
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 318
+        width: 28
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9f7e35922f441e30800000000000000
+      internalID: 4473287339837128604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_56
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 318
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 515fb7db22aca09c0800000000000000
+      internalID: -3960130671762213611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_57
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 318
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43c2a89fb6b650150800000000000000
+      internalID: 5838190603447970868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_58
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 318
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 819dce75ae06f9b20800000000000000
+      internalID: 3143337624541649176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_59
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 318
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0c7c7cddfd683600800000000000000
+      internalID: 448229100016663563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_60
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 279
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c758995b235fca0b0800000000000000
+      internalID: -5715924228896094852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_61
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 279
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 137224dc17d6473f0800000000000000
+      internalID: -903977289652230351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_62
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 279
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fc1fced69e627210800000000000000
+      internalID: 1329246434289982712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_63
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 279
+        width: 22
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1cce993777ffcde0800000000000000
+      internalID: -1310556875101647841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_64
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 245
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5298644f47a22340800000000000000
+      internalID: 4837612908641292890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_65
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 233
+        width: 10
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ceab16abb8672a790800000000000000
+      internalID: -7520318085255808276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_66
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 245
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4cd7adbac8caa430800000000000000
+      internalID: 3795066409103907918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_67
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 249
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cba17871d832ec020800000000000000
+      internalID: 2363865943308180156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_68
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 250
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5681b482a8ce082c0800000000000000
+      internalID: -4431281955206915995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_69
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 239
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7ccbe2607ff85180800000000000000
+      internalID: -9126263786705269635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_70
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 230
+        width: 28
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59630879b34f42c10800000000000000
+      internalID: 2028014269005575829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_71
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 230
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf08f048e1bbceb70800000000000000
+      internalID: 8929717900907872508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_72
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 230
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0caa1478446827350800000000000000
+      internalID: 6013016081378159296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_73
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 230
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2617bc842efeef50800000000000000
+      internalID: 6912741910993376811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_74
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 230
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6646ed613a88e970800000000000000
+      internalID: 8784423018087990890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_75
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 191
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb9b166e62c6e8950800000000000000
+      internalID: 6453214230398220735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_76
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 191
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16817174b866705e0800000000000000
+      internalID: -1943471965807896479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_77
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 191
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 385abb5065cb67680800000000000000
+      internalID: -8757605347725957757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_78
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 191
+        width: 22
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bb2b1eb06615d440800000000000000
+      internalID: 4959895169380592562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_79
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 157
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1db2380ac5b504e0800000000000000
+      internalID: -2016005378852864740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_80
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 145
+        width: 14
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e364f115b5d3bbad0800000000000000
+      internalID: -2685485290384046530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_81
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 157
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0be89513375828f10800000000000000
+      internalID: 2270523891943837360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_82
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 161
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6db8080d204aff2c0800000000000000
+      internalID: -4395614379295339562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_83
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 162
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79559f6ad312b7e20800000000000000
+      internalID: 3349307296558175639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_84
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 142
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a227a053dbafa98f0800000000000000
+      internalID: -532837915344342486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_85
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 151
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d74d3fe5ff726570800000000000000
+      internalID: 8458463744412698577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_86
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 142
+        width: 28
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 556cfd78b9ad48fc0800000000000000
+      internalID: -3493427049398286763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_87
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 142
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 846b81e6435d126e0800000000000000
+      internalID: -1863974349592545720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_88
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 142
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 816077f0ebafbaa50800000000000000
+      internalID: 6533591378641225240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_89
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 142
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab61e92df13a4b2d0800000000000000
+      internalID: -3263804472863877446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_90
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 103
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6057ff6629d9a3dc0800000000000000
+      internalID: -3658438495166302970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_91
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 103
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f458624d0a6d2ba40800000000000000
+      internalID: 5382600490903569743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_92
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 103
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afebf6372bd017b30800000000000000
+      internalID: 4283219780698095354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_93
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 103
+        width: 22
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7afee795ea04bc50800000000000000
+      internalID: 6679976128510098044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_94
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 69
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a19bdaaa74a078a30800000000000000
+      internalID: 4217350878978226458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_95
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 57
+        width: 10
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac5e19e3d0ec22840800000000000000
+      internalID: 5197943476218619338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_96
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 69
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 392201c21204f9fc0800000000000000
+      internalID: -3485997075344121197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_97
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 73
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7452cc43f9ad18e90800000000000000
+      internalID: -7025093566400813753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_98
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 74
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b786b253031b98d0800000000000000
+      internalID: -2838654235133442120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_99
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 63
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94ae423fb031aa1a0800000000000000
+      internalID: -6797599745517491639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_100
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 54
+        width: 28
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be469635d473519b0800000000000000
+      internalID: -5110117396930534165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_101
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 54
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63ff6f51bf6269160800000000000000
+      internalID: 7031850728032763702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_102
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 54
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c22c6570fb152540800000000000000
+      internalID: 4982419282331443911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_103
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 54
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4a0d15ab70eeb360800000000000000
+      internalID: 7187428876985633357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel_transparent_104
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 54
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 141fd1e68130fc920800000000000000
+      internalID: 3012630079195705665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
