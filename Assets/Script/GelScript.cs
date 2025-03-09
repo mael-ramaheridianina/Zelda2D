@@ -16,16 +16,53 @@ public class GelScript : MonoBehaviour
     private Rigidbody2D rb;
     private bool isJumping = false;
     private static readonly int IsJumpingHash = Animator.StringToHash("IsJumping");
+    private PlayerScript playerScript;
+    private float savedAnimationTime = 0f;
+    private bool wasCelebrating = false;
 
     void Start()
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
-        playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        if (player != null)
+        {
+            playerTransform = player.transform;
+            playerScript = player.GetComponent<PlayerScript>();
+        }
     }
 
     void Update()
     {
+        if (playerScript != null && playerScript.IsCelebrating())
+        {
+            if (!wasCelebrating)
+            {
+                // Sauvegarde le temps de l'animation actuelle
+                if (animator.GetCurrentAnimatorStateInfo(0).IsName("Gel_Saute"))
+                {
+                    savedAnimationTime = animator.GetCurrentAnimatorStateInfo(0).normalizedTime;
+                }
+                // Passe à l'animation Idle
+                animator.Play("Idle");
+                rb.linearVelocity = Vector2.zero;
+            }
+            wasCelebrating = true;
+            return;
+        }
+
+        // Si le player vient d'arrêter de célébrer
+        if (wasCelebrating)
+        {
+            wasCelebrating = false;
+            if (savedAnimationTime > 0)
+            {
+                // Reprend l'animation Gel_Saute là où elle s'était arrêtée
+                animator.Play("Gel_Saute", -1, savedAnimationTime);
+                savedAnimationTime = 0;
+            }
+        }
+
         float distanceToPlayer = Vector2.Distance(transform.position, playerTransform.position);
         
         // Si le joueur sort de la zone de détection
