@@ -26,8 +26,17 @@ public class GelScript : MonoBehaviour
 
     void Update()
     {
-        isJumping =true;
-        if (!isJumping && Vector2.Distance(transform.position, playerTransform.position) <= detectionRange)
+        float distanceToPlayer = Vector2.Distance(transform.position, playerTransform.position);
+        
+        // Si le joueur sort de la zone de détection
+        if (distanceToPlayer > detectionRange)
+        {
+            ReturnToIdle();
+            return;
+        }
+
+        // Démarre le saut si on est en Idle et que le joueur est dans la zone
+        if (!isJumping && !animator.GetCurrentAnimatorStateInfo(0).IsName("Gel_Saute"))
         {
             StartJump();
         }
@@ -39,17 +48,34 @@ public class GelScript : MonoBehaviour
         animator.SetBool(IsJumpingHash, true);
     }
 
-    // Cette méthode sera appelée via Animation Event sur la frame spécifique
+    private void ReturnToIdle()
+    {
+        isJumping = false;
+        animator.SetBool(IsJumpingHash, false);
+        rb.linearVelocity = Vector2.zero;
+        // Force le retour à l'animation Idle
+        animator.Play("Gel_Idle");
+    }
+
+    // Méthode à appeler via Animation Event pendant l'animation de saut
     public void ApplyJumpMovement()
     {
         if (playerTransform != null)
         {
-            Vector2 directionToPlayer = (playerTransform.position - transform.position).normalized;
-            rb.linearVelocity = directionToPlayer * jumpForce;
+            // Vérifie si le joueur est toujours dans la zone avant d'appliquer le mouvement
+            float currentDistance = Vector2.Distance(transform.position, playerTransform.position);
+            if (currentDistance <= detectionRange)
+            {
+                Vector2 directionToPlayer = (playerTransform.position - transform.position).normalized;
+                rb.linearVelocity = directionToPlayer * jumpForce;
+            }
+            else
+            {
+                ReturnToIdle();
+            }
         }
     }
 
-    // Cette méthode sera appelée via Animation Event à la fin de l'animation
     public void OnJumpEnd()
     {
         isJumping = false;
@@ -66,13 +92,10 @@ public class GelScript : MonoBehaviour
             
             if (player != null && heartManager != null)
             {
-                // Infliger les dégâts
                 heartManager.TakeDamage(damageAmount);
                 
-                // Calculer la direction du knockback (du Gel vers le joueur)
                 Vector2 knockbackDirection = (collision.transform.position - transform.position).normalized;
                 
-                // Appliquer le knockback et l'invulnérabilité
                 player.StartKnockback(knockbackDirection);
                 player.StartInvulnerability();
             }
