@@ -11,14 +11,17 @@ public class Lanmola_HeadScript : MonoBehaviour
 
     [Header("Movement Settings")]
     [SerializeField] private float moveSpeed = 3f;
-    
+    [SerializeField] private float rotationOffset = 90f; // Ajout d'un offset configurable
+
     private Transform playerTransform;
     private List<GameObject> bodyParts = new List<GameObject>();
     private Queue<Vector3> positionHistory = new Queue<Vector3>();
+    private SpriteRenderer spriteRenderer;
     
     void Start()
     {
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+        spriteRenderer = GetComponent<SpriteRenderer>();
         SpawnBodyParts();
     }
 
@@ -42,7 +45,14 @@ public class Lanmola_HeadScript : MonoBehaviour
     {
         if (playerTransform != null)
         {
+            // Calcul de la direction
             Vector2 direction = (playerTransform.position - transform.position).normalized;
+            
+            // Rotation de la tête avec offset
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + rotationOffset;
+            transform.rotation = Quaternion.Euler(0, 0, angle);
+            
+            // Déplacement
             transform.position += (Vector3)(direction * moveSpeed * Time.deltaTime);
         }
     }
