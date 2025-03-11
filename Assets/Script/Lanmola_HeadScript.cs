@@ -14,6 +14,10 @@ public class Lanmola_HeadScript : MonoBehaviour
     [SerializeField] private float moveSpeed = 3f;
     [SerializeField] private float rotationOffset = 90f; // Ajout d'un offset configurable
 
+    [Header("Combat Settings")]
+    [SerializeField] private int damageAmount = 1;
+    [SerializeField] private float knockbackForce = 5f;
+
     private Transform playerTransform;
     private List<GameObject> bodyParts = new List<GameObject>();
     private Queue<Vector3> positionHistory = new Queue<Vector3>();
@@ -69,7 +73,9 @@ public class Lanmola_HeadScript : MonoBehaviour
             
             Vector3 spawnPosition = previousPosition + (Vector3.down * distance);
             GameObject bodyPart = Instantiate(bodyPrefab, spawnPosition, Quaternion.identity);
-            bodyPart.GetComponent<Lanmola_BodyScript>().Initialize(i * distance);
+            var bodyScript = bodyPart.GetComponent<Lanmola_BodyScript>();
+            bodyScript.Initialize(i * distance);
+            bodyScript.UpdateCombatSettings(damageAmount, knockbackForce);
             bodyParts.Add(bodyPart);
             
             previousPosition = spawnPosition;
@@ -99,6 +105,63 @@ public class Lanmola_HeadScript : MonoBehaviour
                 );
             }
             index++;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            PlayerScript player = collision.gameObject.GetComponent<PlayerScript>();
+            HeartManager heartManager = FindFirstObjectByType<HeartManager>();
+
+            if (player != null && heartManager != null)
+            {
+                // Infliger les dégâts
+                heartManager.TakeDamage(damageAmount);
+
+                // Calculer la direction du knockback
+                Vector2 knockbackDirection = (collision.transform.position - transform.position).normalized;
+
+                // Appliquer le knockback et l'invulnerabilité
+                player.StartKnockback(knockbackDirection);
+                player.StartInvulnerability();
+            }
+        }
+    }
+
+    public int DamageAmount
+    {
+        get => damageAmount;
+        set
+        {
+            damageAmount = value;
+            UpdateBodyCombatSettings();
+        }
+    }
+
+    public float KnockbackForce
+    {
+        get => knockbackForce;
+        set
+        {
+            knockbackForce = value;
+            UpdateBodyCombatSettings();
+        }
+    }
+
+    private void UpdateBodyCombatSettings()
+    {
+        foreach (var bodyPart in bodyParts)
+        {
+            if (bodyPart != null)
+            {
+                var bodyScript = bodyPart.GetComponent<Lanmola_BodyScript>();
+                if (bodyScript != null)
+                {
+                    bodyScript.UpdateCombatSettings(damageAmount, knockbackForce);
+                }
+            }
         }
     }
 }
