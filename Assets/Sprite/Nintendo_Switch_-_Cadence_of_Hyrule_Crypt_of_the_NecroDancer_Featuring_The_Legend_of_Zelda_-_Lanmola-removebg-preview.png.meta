@@ -1,0 +1,702 @@
+fileFormatVersion: 2
+guid: 167849d71fdae494babf01756a36ac77
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -594228412243182429
+    second: Nintendo_Switch_-_Cadence_of_Hyrule_Crypt_of_the_NecroDancer_Featuring_The_Legend_of_Zelda_-_Lanmola-removebg-preview_0
+  - first:
+      213: 4957163560264933108
+    second: Nintendo_Switch_-_Cadence_of_Hyrule_Crypt_of_the_NecroDancer_Featuring_The_Legend_of_Zelda_-_Lanmola-removebg-preview_1
+  - first:
+      213: -5227526933584729025
+    second: Nintendo_Switch_-_Cadence_of_Hyrule_Crypt_of_the_NecroDancer_Featuring_The_Legend_of_Zelda_-_Lanmola-removebg-preview_2
+  - first:
+      213: 5514277803315970398
+    second: Nintendo_Switch_-_Cadence_of_Hyrule_Crypt_of_the_NecroDancer_Featuring_The_Legend_of_Zelda_-_Lanmola-removebg-preview_3
+  - first:
+      213: 4908662164929703017
+    second: Nintendo_Switch_-_Cadence_of_Hyrule_Crypt_of_the_NecroDancer_Featuring_The_Legend_of_Zelda_-_Lanmola-removebg-preview_4
+  - first:
+      213: 3799815074254105623
+    second: Nintendo_Switch_-_Cadence_of_Hyrule_Crypt_of_the_NecroDancer_Featuring_The_Legend_of_Zelda_-_Lanmola-removebg-preview_5
+  - first:
+      213: -6831631559317273330
+    second: Nintendo_Switch_-_Cadence_of_Hyrule_Crypt_of_the_NecroDancer_Featuring_The_Legend_of_Zelda_-_Lanmola-removebg-preview_6
+  - first:
+      213: 6505331180906795253
+    second: Nintendo_Switch_-_Cadence_of_Hyrule_Crypt_of_the_NecroDancer_Featuring_The_Legend_of_Zelda_-_Lanmola-removebg-preview_7
+  - first:
+      213: 7979382548190288433
+    second: Nintendo_Switch_-_Cadence_of_Hyrule_Crypt_of_the_NecroDancer_Featuring_The_Legend_of_Zelda_-_Lanmola-removebg-preview_8
+  - first:
+      213: -5625760249964555931
+    second: Nintendo_Switch_-_Cadence_of_Hyrule_Crypt_of_the_NecroDancer_Featuring_The_Legend_of_Zelda_-_Lanmola-removebg-preview_9
+  - first:
+      213: 1795894871158454334
+    second: Nintendo_Switch_-_Cadence_of_Hyrule_Crypt_of_the_NecroDancer_Featuring_The_Legend_of_Zelda_-_Lanmola-removebg-preview_10
+  - first:
+      213: 7677523813401148584
+    second: Nintendo_Switch_-_Cadence_of_Hyrule_Crypt_of_the_NecroDancer_Featuring_The_Legend_of_Zelda_-_Lanmola-removebg-preview_11
+  - first:
+      213: -5890235147521753281
+    second: Nintendo_Switch_-_Cadence_of_Hyrule_Crypt_of_the_NecroDancer_Featuring_The_Legend_of_Zelda_-_Lanmola-removebg-preview_12
+  - first:
+      213: 8834934371699530416
+    second: Nintendo_Switch_-_Cadence_of_Hyrule_Crypt_of_the_NecroDancer_Featuring_The_Legend_of_Zelda_-_Lanmola-removebg-preview_13
+  - first:
+      213: 7051956092905617819
+    second: Nintendo_Switch_-_Cadence_of_Hyrule_Crypt_of_the_NecroDancer_Featuring_The_Legend_of_Zelda_-_Lanmola-removebg-preview_14
+  - first:
+      213: -4160835017137558499
+    second: Nintendo_Switch_-_Cadence_of_Hyrule_Crypt_of_the_NecroDancer_Featuring_The_Legend_of_Zelda_-_Lanmola-removebg-preview_15
+  - first:
+      213: 2573990451410002262
+    second: Nintendo_Switch_-_Cadence_of_Hyrule_Crypt_of_the_NecroDancer_Featuring_The_Legend_of_Zelda_-_Lanmola-removebg-preview_16
+  - first:
+      213: -3818327056897819122
+    second: Nintendo_Switch_-_Cadence_of_Hyrule_Crypt_of_the_NecroDancer_Featuring_The_Legend_of_Zelda_-_Lanmola-removebg-preview_17
+  - first:
+      213: 3552783970269654138
+    second: Nintendo_Switch_-_Cadence_of_Hyrule_Crypt_of_the_NecroDancer_Featuring_The_Legend_of_Zelda_-_Lanmola-removebg-preview_18
+  - first:
+      213: 1354847750198303378
+    second: Nintendo_Switch_-_Cadence_of_Hyrule_Crypt_of_the_NecroDancer_Featuring_The_Legend_of_Zelda_-_Lanmola-removebg-preview_19
+  - first:
+      213: 3028245908050493221
+    second: Nintendo_Switch_-_Cadence_of_Hyrule_Crypt_of_the_NecroDancer_Featuring_The_Legend_of_Zelda_-_Lanmola-removebg-preview_20
+  - first:
+      213: -5428220829982737145
+    second: Nintendo_Switch_-_Cadence_of_Hyrule_Crypt_of_the_NecroDancer_Featuring_The_Legend_of_Zelda_-_Lanmola-removebg-preview_21
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 26
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Nintendo_Switch_-_Cadence_of_Hyrule_Crypt_of_the_NecroDancer_Featuring_The_Legend_of_Zelda_-_Lanmola-removebg-preview_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 74
+        width: 33
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3acfccc4860e0c7f0800000000000000
+      internalID: -594228412243182429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo_Switch_-_Cadence_of_Hyrule_Crypt_of_the_NecroDancer_Featuring_The_Legend_of_Zelda_-_Lanmola-removebg-preview_1
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 74
+        width: 34
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fe1a1f6ef16bc440800000000000000
+      internalID: 4957163560264933108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo_Switch_-_Cadence_of_Hyrule_Crypt_of_the_NecroDancer_Featuring_The_Legend_of_Zelda_-_Lanmola-removebg-preview_2
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 75
+        width: 32
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3c25e553f71477b0800000000000000
+      internalID: -5227526933584729025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo_Switch_-_Cadence_of_Hyrule_Crypt_of_the_NecroDancer_Featuring_The_Legend_of_Zelda_-_Lanmola-removebg-preview_3
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 76
+        width: 35
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e51487b3276a68c40800000000000000
+      internalID: 5514277803315970398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo_Switch_-_Cadence_of_Hyrule_Crypt_of_the_NecroDancer_Featuring_The_Legend_of_Zelda_-_Lanmola-removebg-preview_4
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 75
+        width: 34
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96ce8075b321f1440800000000000000
+      internalID: 4908662164929703017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo_Switch_-_Cadence_of_Hyrule_Crypt_of_the_NecroDancer_Featuring_The_Legend_of_Zelda_-_Lanmola-removebg-preview_5
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 76
+        width: 34
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71c27118da7abb430800000000000000
+      internalID: 3799815074254105623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo_Switch_-_Cadence_of_Hyrule_Crypt_of_the_NecroDancer_Featuring_The_Legend_of_Zelda_-_Lanmola-removebg-preview_6
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 77
+        width: 32
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e05cb86da4b2131a0800000000000000
+      internalID: -6831631559317273330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo_Switch_-_Cadence_of_Hyrule_Crypt_of_the_NecroDancer_Featuring_The_Legend_of_Zelda_-_Lanmola-removebg-preview_7
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 76
+        width: 34
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f0d8380e34974a50800000000000000
+      internalID: 6505331180906795253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo_Switch_-_Cadence_of_Hyrule_Crypt_of_the_NecroDancer_Featuring_The_Legend_of_Zelda_-_Lanmola-removebg-preview_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 41
+        width: 37
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13a55d7a6267cbe60800000000000000
+      internalID: 7979382548190288433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo_Switch_-_Cadence_of_Hyrule_Crypt_of_the_NecroDancer_Featuring_The_Legend_of_Zelda_-_Lanmola-removebg-preview_9
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 42
+        width: 35
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5619955fbd84de1b0800000000000000
+      internalID: -5625760249964555931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo_Switch_-_Cadence_of_Hyrule_Crypt_of_the_NecroDancer_Featuring_The_Legend_of_Zelda_-_Lanmola-removebg-preview_10
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 42
+        width: 35
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e387859cedc4ce810800000000000000
+      internalID: 1795894871158454334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo_Switch_-_Cadence_of_Hyrule_Crypt_of_the_NecroDancer_Featuring_The_Legend_of_Zelda_-_Lanmola-removebg-preview_11
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 38
+        width: 34
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8acb0642b3b0c8a60800000000000000
+      internalID: 7677523813401148584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo_Switch_-_Cadence_of_Hyrule_Crypt_of_the_NecroDancer_Featuring_The_Legend_of_Zelda_-_Lanmola-removebg-preview_12
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 42
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3ff174575ea14ea0800000000000000
+      internalID: -5890235147521753281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo_Switch_-_Cadence_of_Hyrule_Crypt_of_the_NecroDancer_Featuring_The_Legend_of_Zelda_-_Lanmola-removebg-preview_13
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 43
+        width: 35
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ba1a07600efb9a70800000000000000
+      internalID: 8834934371699530416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo_Switch_-_Cadence_of_Hyrule_Crypt_of_the_NecroDancer_Featuring_The_Legend_of_Zelda_-_Lanmola-removebg-preview_14
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 43
+        width: 66
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b997a4124b49dd160800000000000000
+      internalID: 7051956092905617819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo_Switch_-_Cadence_of_Hyrule_Crypt_of_the_NecroDancer_Featuring_The_Legend_of_Zelda_-_Lanmola-removebg-preview_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1c6282d89eb146c0800000000000000
+      internalID: -4160835017137558499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo_Switch_-_Cadence_of_Hyrule_Crypt_of_the_NecroDancer_Featuring_The_Legend_of_Zelda_-_Lanmola-removebg-preview_16
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 2
+        width: 34
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6516a8f8da6a8b320800000000000000
+      internalID: 2573990451410002262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo_Switch_-_Cadence_of_Hyrule_Crypt_of_the_NecroDancer_Featuring_The_Legend_of_Zelda_-_Lanmola-removebg-preview_17
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 2
+        width: 32
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0eb759a5c3920bc0800000000000000
+      internalID: -3818327056897819122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo_Switch_-_Cadence_of_Hyrule_Crypt_of_the_NecroDancer_Featuring_The_Legend_of_Zelda_-_Lanmola-removebg-preview_18
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 2
+        width: 35
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7cef9f82360e4130800000000000000
+      internalID: 3552783970269654138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo_Switch_-_Cadence_of_Hyrule_Crypt_of_the_NecroDancer_Featuring_The_Legend_of_Zelda_-_Lanmola-removebg-preview_19
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 0
+        width: 35
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29a9e4bb9d26dc210800000000000000
+      internalID: 1354847750198303378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo_Switch_-_Cadence_of_Hyrule_Crypt_of_the_NecroDancer_Featuring_The_Legend_of_Zelda_-_Lanmola-removebg-preview_20
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 0
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52f31e9eb9d760a20800000000000000
+      internalID: 3028245908050493221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo_Switch_-_Cadence_of_Hyrule_Crypt_of_the_NecroDancer_Featuring_The_Legend_of_Zelda_-_Lanmola-removebg-preview_21
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 0
+        width: 35
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70db0824ae51ba4b0800000000000000
+      internalID: -5428220829982737145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Nintendo_Switch_-_Cadence_of_Hyrule_Crypt_of_the_NecroDancer_Featuring_The_Legend_of_Zelda_-_Lanmola-removebg-preview_0: -594228412243182429
+      Nintendo_Switch_-_Cadence_of_Hyrule_Crypt_of_the_NecroDancer_Featuring_The_Legend_of_Zelda_-_Lanmola-removebg-preview_1: 4957163560264933108
+      Nintendo_Switch_-_Cadence_of_Hyrule_Crypt_of_the_NecroDancer_Featuring_The_Legend_of_Zelda_-_Lanmola-removebg-preview_10: 1795894871158454334
+      Nintendo_Switch_-_Cadence_of_Hyrule_Crypt_of_the_NecroDancer_Featuring_The_Legend_of_Zelda_-_Lanmola-removebg-preview_11: 7677523813401148584
+      Nintendo_Switch_-_Cadence_of_Hyrule_Crypt_of_the_NecroDancer_Featuring_The_Legend_of_Zelda_-_Lanmola-removebg-preview_12: -5890235147521753281
+      Nintendo_Switch_-_Cadence_of_Hyrule_Crypt_of_the_NecroDancer_Featuring_The_Legend_of_Zelda_-_Lanmola-removebg-preview_13: 8834934371699530416
+      Nintendo_Switch_-_Cadence_of_Hyrule_Crypt_of_the_NecroDancer_Featuring_The_Legend_of_Zelda_-_Lanmola-removebg-preview_14: 7051956092905617819
+      Nintendo_Switch_-_Cadence_of_Hyrule_Crypt_of_the_NecroDancer_Featuring_The_Legend_of_Zelda_-_Lanmola-removebg-preview_15: -4160835017137558499
+      Nintendo_Switch_-_Cadence_of_Hyrule_Crypt_of_the_NecroDancer_Featuring_The_Legend_of_Zelda_-_Lanmola-removebg-preview_16: 2573990451410002262
+      Nintendo_Switch_-_Cadence_of_Hyrule_Crypt_of_the_NecroDancer_Featuring_The_Legend_of_Zelda_-_Lanmola-removebg-preview_17: -3818327056897819122
+      Nintendo_Switch_-_Cadence_of_Hyrule_Crypt_of_the_NecroDancer_Featuring_The_Legend_of_Zelda_-_Lanmola-removebg-preview_18: 3552783970269654138
+      Nintendo_Switch_-_Cadence_of_Hyrule_Crypt_of_the_NecroDancer_Featuring_The_Legend_of_Zelda_-_Lanmola-removebg-preview_19: 1354847750198303378
+      Nintendo_Switch_-_Cadence_of_Hyrule_Crypt_of_the_NecroDancer_Featuring_The_Legend_of_Zelda_-_Lanmola-removebg-preview_2: -5227526933584729025
+      Nintendo_Switch_-_Cadence_of_Hyrule_Crypt_of_the_NecroDancer_Featuring_The_Legend_of_Zelda_-_Lanmola-removebg-preview_20: 3028245908050493221
+      Nintendo_Switch_-_Cadence_of_Hyrule_Crypt_of_the_NecroDancer_Featuring_The_Legend_of_Zelda_-_Lanmola-removebg-preview_21: -5428220829982737145
+      Nintendo_Switch_-_Cadence_of_Hyrule_Crypt_of_the_NecroDancer_Featuring_The_Legend_of_Zelda_-_Lanmola-removebg-preview_3: 5514277803315970398
+      Nintendo_Switch_-_Cadence_of_Hyrule_Crypt_of_the_NecroDancer_Featuring_The_Legend_of_Zelda_-_Lanmola-removebg-preview_4: 4908662164929703017
+      Nintendo_Switch_-_Cadence_of_Hyrule_Crypt_of_the_NecroDancer_Featuring_The_Legend_of_Zelda_-_Lanmola-removebg-preview_5: 3799815074254105623
+      Nintendo_Switch_-_Cadence_of_Hyrule_Crypt_of_the_NecroDancer_Featuring_The_Legend_of_Zelda_-_Lanmola-removebg-preview_6: -6831631559317273330
+      Nintendo_Switch_-_Cadence_of_Hyrule_Crypt_of_the_NecroDancer_Featuring_The_Legend_of_Zelda_-_Lanmola-removebg-preview_7: 6505331180906795253
+      Nintendo_Switch_-_Cadence_of_Hyrule_Crypt_of_the_NecroDancer_Featuring_The_Legend_of_Zelda_-_Lanmola-removebg-preview_8: 7979382548190288433
+      Nintendo_Switch_-_Cadence_of_Hyrule_Crypt_of_the_NecroDancer_Featuring_The_Legend_of_Zelda_-_Lanmola-removebg-preview_9: -5625760249964555931
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
