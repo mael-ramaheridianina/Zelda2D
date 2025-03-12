@@ -22,16 +22,27 @@ public class Lanmola_HeadScript : MonoBehaviour
     private List<GameObject> bodyParts = new List<GameObject>();
     private Queue<Vector3> positionHistory = new Queue<Vector3>();
     private SpriteRenderer spriteRenderer;
+    private Camera mainCamera;
+    private bool isVisible = true;
     
     void Start()
     {
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
         spriteRenderer = GetComponent<SpriteRenderer>();
+        mainCamera = Camera.main;
         SpawnBodyParts();
     }
 
     void Update()
     {
+        // Vérifie si le Lanmola est visible
+        isVisible = IsVisibleOnScreen();
+
+        if (!isVisible)
+        {
+            return; // Ne fait rien si hors caméra
+        }
+
         StorePosition();
         MoveHead();
         UpdateBodyParts();
@@ -163,5 +174,15 @@ public class Lanmola_HeadScript : MonoBehaviour
                 }
             }
         }
+    }
+
+    private bool IsVisibleOnScreen()
+    {
+        if (mainCamera == null) return false;
+
+        Vector3 viewportPoint = mainCamera.WorldToViewportPoint(transform.position);
+        return viewportPoint.x >= 0 && viewportPoint.x <= 1 && 
+               viewportPoint.y >= 0 && viewportPoint.y <= 1 && 
+               viewportPoint.z > 0;
     }
 }
