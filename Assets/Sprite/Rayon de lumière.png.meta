@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      "Rayon de lumi\xE8re_0": 5883494361699968606
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
