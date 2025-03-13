@@ -30,6 +30,14 @@ public class PlayerScript : MonoBehaviour
     [SerializeField] private Sprite leftSprite;   // Sprite côté gauche
     [SerializeField] private Sprite rightSprite;  // Sprite côté droit
 
+    [Header("Sword Sprites")]
+    [SerializeField] private Sprite frontSwordSprite;
+    [SerializeField] private Sprite backSwordSprite;
+    [SerializeField] private Sprite leftSwordSprite;
+    [SerializeField] private Sprite rightSwordSprite;
+
+    private bool hasSword = false;
+
     private Rigidbody2D rb;
     private Vector2 movement;
     private HeartManager heartManager;
@@ -165,39 +173,66 @@ public class PlayerScript : MonoBehaviour
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
         movement = new Vector2(moveX, moveY).normalized;
-        animator.enabled = true;
 
-        // Gestion des animations et sprites de direction
-        if (moveY > 0) // Flèche du haut pressée
-        {
-            idleSprite = backSprite;
-            animator.Play("Walk up");
-        }
-
-        if (moveY < 0) // Flèche du bas
-        {
-            idleSprite = frontSprite;
-            animator.Play("Walk down");
-        }
-        
-        if (moveX > 0) // Flèche droite
-        {
-            idleSprite = rightSprite;
-            animator.Play("Walk Right");
-        }
-
-        if (moveX < 0) // Flèche gauche
-        {
-            idleSprite = leftSprite;
-            animator.Play("WalkLeft");
-        }
-        
-        // plus de mouvement
-        if (moveX == 0 && moveY == 0)
+        // Si le joueur a l'épée, on gère uniquement les sprites sans animation
+        if (hasSword)
         {
             animator.enabled = false;
-            spriteRenderer.sprite = idleSprite;
+            if (moveY > 0)
+            {
+                spriteRenderer.sprite = backSwordSprite;
+                idleSprite = backSwordSprite;
+            }
+            else if (moveY < 0)
+            {
+                spriteRenderer.sprite = frontSwordSprite;
+                idleSprite = frontSwordSprite;
+            }
+            else if (moveX > 0)
+            {
+                spriteRenderer.sprite = rightSwordSprite;
+                idleSprite = rightSwordSprite;
+            }
+            else if (moveX < 0)
+            {
+                spriteRenderer.sprite = leftSwordSprite;
+                idleSprite = leftSwordSprite;
+            }
         }
+        // Sinon, comportement normal avec animations
+        else
+        {
+            animator.enabled = true;
+            if (moveY > 0)
+            {
+                idleSprite = backSprite;
+                animator.Play("WalkUp");
+            }
+            else if (moveY < 0)
+            {
+                idleSprite = frontSprite;
+                animator.Play("WalkDown");
+            }
+            else if (moveX > 0)
+            {
+                idleSprite = rightSprite;
+                animator.Play("WalkRight");
+            }
+            else if (moveX < 0)
+            {
+                idleSprite = leftSprite;
+                animator.Play("WalkLeft");
+            }
+
+            if (moveX == 0 && moveY == 0)
+            {
+                animator.enabled = false;
+                spriteRenderer.sprite = idleSprite;
+            }
+        }
+
+        // Applique le mouvement
+        rb.linearVelocity = movement * moveSpeed;
     }
 
     private void UpdateCelebration()
@@ -259,6 +294,32 @@ public class PlayerScript : MonoBehaviour
         {
             StartCelebration();
         }
+        else if (other.CompareTag("Epée"))
+        {
+            StartCelebration();
+            ObtainSword();
+        }
+    }
+
+    private void ObtainSword()
+    {
+        hasSword = true;
+        // Met à jour le sprite par défaut avec la version épée
+        defaultSprite = frontSwordSprite;
+        UpdateCurrentSprite();
+    }
+
+    private void UpdateCurrentSprite()
+    {
+        // Met à jour le sprite selon la direction et si on a l'épée
+        if (hasSword)
+        {
+            if (idleSprite == frontSprite) idleSprite = frontSwordSprite;
+            else if (idleSprite == backSprite) idleSprite = backSwordSprite;
+            else if (idleSprite == leftSprite) idleSprite = leftSwordSprite;
+            else if (idleSprite == rightSprite) idleSprite = rightSwordSprite;
+        }
+        spriteRenderer.sprite = idleSprite;
     }
 
     public void StartKnockback(Vector2 direction)
