@@ -2,15 +2,28 @@ using UnityEngine;
 
 public class RayonScript : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void Start()
     {
-        
+        // Trouve l'épée et s'abonne à son événement
+        EpéeScript epee = FindObjectOfType<EpéeScript>();
+        if (epee != null)
+        {
+            epee.OnEpeeCollectee += DisableRayon;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void DisableRayon()
     {
-        
+        gameObject.SetActive(false);
+    }
+
+    private void OnDestroy()
+    {
+        // Se désabonne de l'événement quand le rayon est détruit
+        EpéeScript epee = FindObjectOfType<EpéeScript>();
+        if (epee != null)
+        {
+            epee.OnEpeeCollectee -= DisableRayon;
+        }
     }
 }

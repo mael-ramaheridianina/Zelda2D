@@ -3,6 +3,9 @@ using DG.Tweening;
 
 public class EpéeScript : MonoBehaviour
 {
+    // Ajouter cette ligne en haut de la classe
+    public event System.Action OnEpeeCollectee;
+
     [Header("Animation Settings")]
     [SerializeField] private float bounceHeight = 0.2f;
     [SerializeField] private float bounceSpeed = 2f;
@@ -37,6 +40,8 @@ public class EpéeScript : MonoBehaviour
         if (!isCollected && other.CompareTag("Player"))
         {
             isCollected = true;
+            OnEpeeCollectee?.Invoke(); // Déclenche l'événement
+            
             PlayerScript player = other.GetComponent<PlayerScript>();
             if (player != null)
             {
