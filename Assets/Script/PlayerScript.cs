@@ -244,9 +244,16 @@ public class PlayerScript : MonoBehaviour
             if (celebrationTimer <= 0)
             {
                 isCelebrating = false;
-                // Retour au sprite normal
-                spriteRenderer.sprite = defaultSprite;
-                idleSprite = defaultSprite;
+                // On met à jour le sprite seulement après la fin de la célébration
+                if (hasSword)
+                {
+                    UpdateCurrentSprite(); // Met à jour vers le sprite avec épée
+                }
+                else
+                {
+                    spriteRenderer.sprite = defaultSprite;
+                    idleSprite = defaultSprite;
+                }
             }
         }
     }
@@ -304,9 +311,8 @@ public class PlayerScript : MonoBehaviour
     private void ObtainSword()
     {
         hasSword = true;
-        // Met à jour le sprite par défaut avec la version épée
         defaultSprite = frontSwordSprite;
-        UpdateCurrentSprite();
+        // UpdateCurrentSprite sera appelé après la célébration
     }
 
     private void UpdateCurrentSprite()
