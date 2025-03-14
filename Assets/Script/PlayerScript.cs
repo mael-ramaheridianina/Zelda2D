@@ -174,67 +174,58 @@ public class PlayerScript : MonoBehaviour
         float moveY = Input.GetAxisRaw("Vertical");
         movement = new Vector2(moveX, moveY).normalized;
 
-        // Si le joueur a l'épée
-        if (hasSword)
+        Debug.Log($"moveX: {moveX}, moveY: {moveY}");
+        Debug.Log($"Abs moveY: {Mathf.Abs(moveY)}, Abs moveX: {Mathf.Abs(moveX)}");
+
+        animator.enabled = true;
+
+        if (movement != Vector2.zero)
         {
-            if (moveY > 0)
+            if (Mathf.Abs(moveY) > Mathf.Abs(moveX))
             {
-                // Joue l'animation spéciale WalkUpSword quand on va vers le haut avec l'épée
-                animator.enabled = true;
-                animator.Play("WalkUpSword");
-                idleSprite = backSwordSprite;
+                Debug.Log("Mouvement vertical dominant");
+                if (moveY < 0)
+                {
+                    Debug.Log("Joue WalkDown");
+                    animator.Play("WalkDown");
+                    idleSprite = frontSprite;
+                }
+                else if (moveY > 0)
+                {
+                    Debug.Log("Joue WalkUp");
+                    if (hasSword)
+                    {
+                        animator.Play("WalkUpSword");
+                        idleSprite = backSwordSprite;
+                    }
+                    else
+                    {
+                        animator.Play("WalkUp");
+                        idleSprite = backSprite;
+                    }
+                }
             }
             else
             {
-                // Pour les autres directions, juste les sprites statiques
-                animator.enabled = false;
-                if (moveY < 0)
+                Debug.Log("Mouvement horizontal dominant");
+                if (moveX > 0)
                 {
-                    spriteRenderer.sprite = frontSwordSprite;
-                    idleSprite = frontSwordSprite;
-                }
-                else if (moveX > 0)
-                {
-                    spriteRenderer.sprite = rightSwordSprite;
-                    idleSprite = rightSwordSprite;
+                    Debug.Log("Joue WalkRight");
+                    animator.Play("WalkRight");
+                    idleSprite = rightSprite;
                 }
                 else if (moveX < 0)
                 {
-                    spriteRenderer.sprite = leftSwordSprite;
-                    idleSprite = leftSwordSprite;
+                    Debug.Log("Joue WalkLeft");
+                    animator.Play("WalkLeft");
+                    idleSprite = leftSprite;
                 }
             }
         }
-        // Sinon, comportement normal avec animations
         else
         {
-            animator.enabled = true;
-            if (moveY > 0)
-            {
-                idleSprite = backSprite;
-                animator.Play("WalkUp");
-            }
-            else if (moveY < 0)
-            {
-                idleSprite = frontSprite;
-                animator.Play("WalkDown");
-            }
-            else if (moveX > 0)
-            {
-                idleSprite = rightSprite;
-                animator.Play("WalkRight");
-            }
-            else if (moveX < 0)
-            {
-                idleSprite = leftSprite;
-                animator.Play("WalkLeft");
-            }
-
-            if (moveX == 0 && moveY == 0)
-            {
-                animator.enabled = false;
-                spriteRenderer.sprite = idleSprite;
-            }
+            animator.enabled = false;
+            spriteRenderer.sprite = idleSprite;
         }
 
         rb.linearVelocity = movement * moveSpeed;
