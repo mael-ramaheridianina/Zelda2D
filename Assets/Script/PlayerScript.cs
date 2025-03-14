@@ -174,29 +174,35 @@ public class PlayerScript : MonoBehaviour
         float moveY = Input.GetAxisRaw("Vertical");
         movement = new Vector2(moveX, moveY).normalized;
 
-        // Si le joueur a l'épée, on gère uniquement les sprites sans animation
+        // Si le joueur a l'épée
         if (hasSword)
         {
-            animator.enabled = false;
             if (moveY > 0)
             {
-                spriteRenderer.sprite = backSwordSprite;
+                // Joue l'animation spéciale WalkUpSword quand on va vers le haut avec l'épée
+                animator.enabled = true;
+                animator.Play("WalkUpSword");
                 idleSprite = backSwordSprite;
             }
-            else if (moveY < 0)
+            else
             {
-                spriteRenderer.sprite = frontSwordSprite;
-                idleSprite = frontSwordSprite;
-            }
-            else if (moveX > 0)
-            {
-                spriteRenderer.sprite = rightSwordSprite;
-                idleSprite = rightSwordSprite;
-            }
-            else if (moveX < 0)
-            {
-                spriteRenderer.sprite = leftSwordSprite;
-                idleSprite = leftSwordSprite;
+                // Pour les autres directions, juste les sprites statiques
+                animator.enabled = false;
+                if (moveY < 0)
+                {
+                    spriteRenderer.sprite = frontSwordSprite;
+                    idleSprite = frontSwordSprite;
+                }
+                else if (moveX > 0)
+                {
+                    spriteRenderer.sprite = rightSwordSprite;
+                    idleSprite = rightSwordSprite;
+                }
+                else if (moveX < 0)
+                {
+                    spriteRenderer.sprite = leftSwordSprite;
+                    idleSprite = leftSwordSprite;
+                }
             }
         }
         // Sinon, comportement normal avec animations
@@ -231,7 +237,6 @@ public class PlayerScript : MonoBehaviour
             }
         }
 
-        // Applique le mouvement
         rb.linearVelocity = movement * moveSpeed;
     }
 
