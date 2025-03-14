@@ -177,26 +177,17 @@ public class PlayerScript : MonoBehaviour
         Debug.Log($"moveX: {moveX}, moveY: {moveY}");
         Debug.Log($"Abs moveY: {Mathf.Abs(moveY)}, Abs moveX: {Mathf.Abs(moveX)}");
 
-        animator.enabled = true;
-
         if (movement != Vector2.zero)
         {
+            animator.enabled = true;
             if (Mathf.Abs(moveY) > Mathf.Abs(moveX))
             {
-                Debug.Log("Mouvement vertical dominant");
-                if (moveY < 0)
+                if (moveY > 0)
                 {
-                    Debug.Log("Joue WalkDown");
-                    animator.Play("WalkDown");
-                    idleSprite = frontSprite;
-                }
-                else if (moveY > 0)
-                {
-                    Debug.Log("Joue WalkUp");
                     if (hasSword)
                     {
                         animator.Play("WalkUpSword");
-                        idleSprite = backSwordSprite;
+                        idleSprite = backSwordSprite;  // Met à jour directement avec le sprite épée
                     }
                     else
                     {
@@ -204,28 +195,30 @@ public class PlayerScript : MonoBehaviour
                         idleSprite = backSprite;
                     }
                 }
+                else if (moveY < 0)
+                {
+                    animator.Play("WalkDown");
+                    idleSprite = hasSword ? frontSwordSprite : frontSprite;
+                }
             }
             else
             {
-                Debug.Log("Mouvement horizontal dominant");
                 if (moveX > 0)
                 {
-                    Debug.Log("Joue WalkRight");
                     animator.Play("WalkRight");
-                    idleSprite = rightSprite;
+                    idleSprite = hasSword ? rightSwordSprite : rightSprite;
                 }
                 else if (moveX < 0)
                 {
-                    Debug.Log("Joue WalkLeft");
                     animator.Play("WalkLeft");
-                    idleSprite = leftSprite;
+                    idleSprite = hasSword ? leftSwordSprite : leftSprite;
                 }
             }
         }
         else
         {
             animator.enabled = false;
-            spriteRenderer.sprite = idleSprite;
+            spriteRenderer.sprite = idleSprite; // Utilise directement idleSprite qui est déjà le bon sprite
         }
 
         rb.linearVelocity = movement * moveSpeed;
