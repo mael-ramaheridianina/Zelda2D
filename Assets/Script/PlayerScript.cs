@@ -52,6 +52,7 @@ public class PlayerScript : MonoBehaviour
     private Sprite idleSprite;
     private bool isInContactWithEnemy = false;
     private EnemyScript currentEnemy = null;
+    private string currentDirection = "Down"; // Ajoutez cette variable en haut de la classe
 
     void Start()
     {
@@ -174,9 +175,6 @@ public class PlayerScript : MonoBehaviour
         float moveY = Input.GetAxisRaw("Vertical");
         movement = new Vector2(moveX, moveY).normalized;
 
-        Debug.Log($"moveX: {moveX}, moveY: {moveY}");
-        Debug.Log($"Abs moveY: {Mathf.Abs(moveY)}, Abs moveX: {Mathf.Abs(moveX)}");
-
         if (movement != Vector2.zero)
         {
             animator.enabled = true;
@@ -184,10 +182,11 @@ public class PlayerScript : MonoBehaviour
             {
                 if (moveY > 0)
                 {
+                    currentDirection = "Up";
                     if (hasSword)
                     {
                         animator.Play("WalkUpSword");
-                        idleSprite = backSwordSprite;  // Met à jour directement avec le sprite épée
+                        idleSprite = backSwordSprite;
                     }
                     else
                     {
@@ -197,6 +196,7 @@ public class PlayerScript : MonoBehaviour
                 }
                 else if (moveY < 0)
                 {
+                    currentDirection = "Down";
                     animator.Play("WalkDown");
                     idleSprite = hasSword ? frontSwordSprite : frontSprite;
                 }
@@ -205,11 +205,13 @@ public class PlayerScript : MonoBehaviour
             {
                 if (moveX > 0)
                 {
+                    currentDirection = "Right";
                     animator.Play("WalkRight");
                     idleSprite = hasSword ? rightSwordSprite : rightSprite;
                 }
                 else if (moveX < 0)
                 {
+                    currentDirection = "Left";
                     animator.Play("WalkLeft");
                     idleSprite = hasSword ? leftSwordSprite : leftSprite;
                 }
@@ -218,10 +220,39 @@ public class PlayerScript : MonoBehaviour
         else
         {
             animator.enabled = false;
-            spriteRenderer.sprite = idleSprite; // Utilise directement idleSprite qui est déjà le bon sprite
+            UpdateCurrentSprite();
+        }
+        
+        // Ajoutez la gestion de l'attaque
+        if (hasSword && Input.GetKeyDown(KeyCode.Y))
+        {
+            PlayAttackAnimation();
+        }
+    }
+
+    private void PlayAttackAnimation()
+    {
+        // On joue l'animation seulement si on a l'épée et qu'on n'est pas occupé
+        if (hasSword)
+        {
+            animator.enabled = true;
+            switch (currentDirection)
+            {
+                case "Up":
+                    animator.Play("AttaqueHaut");
+                    break;
+                case "Down":
+                    animator.Play("AttaqueBas");
+                    break;
+                case "Left":
+                    animator.Play("AttaqueGauche");
+                    break;
+                case "Right":
+                    animator.Play("AttaqueDroite");
+                    break;
+            }
         }
 
-        rb.linearVelocity = movement * moveSpeed;
     }
 
     private void UpdateCelebration()
@@ -302,6 +333,7 @@ public class PlayerScript : MonoBehaviour
         hasSword = true;
         defaultSprite = frontSwordSprite;
         // UpdateCurrentSprite sera appelé après la célébration
+        Debug.Log($"hasSword = {hasSword}");
     }
 
     private void UpdateCurrentSprite()
