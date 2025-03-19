@@ -5,7 +5,7 @@ public class RayonScript : MonoBehaviour
     private void Start()
     {
         // Trouve l'épée et s'abonne à son événement
-        EpéeScript epee = FindObjectOfType<EpéeScript>();
+        EpéeScript epee = Object.FindFirstObjectByType<EpéeScript>();
         if (epee != null)
         {
             epee.OnEpeeCollectee += DisableRayon;
@@ -20,7 +20,7 @@ public class RayonScript : MonoBehaviour
     private void OnDestroy()
     {
         // Se désabonne de l'événement quand le rayon est détruit
-        EpéeScript epee = FindObjectOfType<EpéeScript>();
+        EpéeScript epee = Object.FindFirstObjectByType<EpéeScript>();
         if (epee != null)
         {
             epee.OnEpeeCollectee -= DisableRayon;
