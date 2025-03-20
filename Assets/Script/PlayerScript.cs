@@ -53,6 +53,17 @@ public class PlayerScript : MonoBehaviour
     private bool isInContactWithEnemy = false;
     private EnemyScript currentEnemy = null;
     private string currentDirection = "Down"; // Ajoutez cette variable en haut de la classe
+    [Header("First Person Transition Settings")]
+    [SerializeField] private float transitionDuration = 0.5f;
+    [SerializeField] private float maxScale = 10f; // Scale finale plus grande pour donner l'effet de première personne
+    [SerializeField] private float moveTowardsCameraSpeed = 2f; // Vitesse de rapprochement vers la caméra
+
+    // Ajouter une référence au ViseurScript
+    [SerializeField] private ViseurScript viseur;
+    [SerializeField] private Camera mainCamera; // Ajout de la référence à la caméra
+
+    private bool isZooming = false;
+    private float zoomTimer = 0f;
 
     void Start()
     {
@@ -71,17 +82,34 @@ public class PlayerScript : MonoBehaviour
         defaultSprite = frontSprite; // Le sprite par défaut est maintenant le sprite face avant
         originalColor = spriteRenderer.color;
         idleSprite= defaultSprite;
+
+        // Initialisation de la caméra
+        mainCamera = Camera.main;
+        if (mainCamera == null)
+        {
+            Debug.LogError("Pas de caméra principale trouvée!");
+        }
     }
 
     void Update()
     {        
-        UpdateCelebration();
+        if (Input.GetKeyDown(KeyCode.R) && !isZooming && !isCelebrating && !isKnockedBack)
+        {
+            StartZoomEffect();
+        }
 
-        UpdateKnockback();
-        UpdateInvulnerability();
-        UpdateLowHealth();
-        UpdateMovement();
-       
+        if (isZooming)
+        {
+            UpdateZoomEffect();
+        }
+        else
+        {
+            UpdateCelebration();
+            UpdateKnockback();
+            UpdateInvulnerability();
+            UpdateLowHealth();
+            UpdateMovement();
+        }
     }
 
     private void UpdateKnockback()
@@ -276,6 +304,51 @@ public class PlayerScript : MonoBehaviour
                 }
             }
         }
+    }
+
+    private void StartZoomEffect()
+    {
+        isZooming = true;
+        zoomTimer = 0f;
+    }
+
+    private void UpdateZoomEffect()
+    {
+        zoomTimer += Time.deltaTime;
+        float progress = zoomTimer / transitionDuration;
+
+        if (progress <= 1f)
+        {
+            // Agrandit le sprite
+            float currentScale = Mathf.Lerp(1f, maxScale, progress);
+            transform.localScale = new Vector3(currentScale, currentScale, 1f);
+
+            // Optionnel : Déplace légèrement le personnage vers le haut pour centrer l'effet
+            float yOffset = Mathf.Lerp(0f, 1f, progress) * moveTowardsCameraSpeed;
+            transform.position = new Vector3(
+                transform.position.x,
+                transform.position.y + yOffset * Time.deltaTime,
+                transform.position.z
+            );
+        }
+        else
+        {
+            // Fin de l'effet
+            isZooming = false;
+            gameObject.SetActive(false);
+            if (viseur != null)
+            {
+                viseur.ShowViseur();
+            }
+        }
+    }
+
+    public void ResetFromViseur()
+    {
+        transform.localScale = Vector3.one;
+        gameObject.SetActive(true);
+        isZooming = false;
+        zoomTimer = 0f;
     }
 
     void FixedUpdate()

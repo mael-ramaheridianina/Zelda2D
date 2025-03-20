@@ -7,6 +7,7 @@ public class ViseurScript : MonoBehaviour
     private Camera mainCamera;
     private bool isVisible = false;
     private SpriteRenderer[] spriteRenderers; // Tableau pour tous les SpriteRenderer
+    [SerializeField] private PlayerScript player;
 
     void Start()
     {
@@ -36,15 +37,20 @@ public class ViseurScript : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R))
+        // S'assure que la caméra est toujours référencée
+        if (mainCamera == null)
         {
-            Debug.Log("Touche R pressée");
-            ToggleViseur();
+            mainCamera = Camera.main;
+            if (mainCamera == null) return;
         }
 
         if (isVisible)
         {
             MoveViseur();
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                HideViseur();
+            }
         }
     }
 
@@ -63,6 +69,42 @@ public class ViseurScript : MonoBehaviour
             centerPosition.z = 0;
             transform.position = centerPosition;
             Debug.Log($"Viseur activé à la position : {centerPosition}");
+        }
+    }
+
+    public void ShowViseur()
+    {
+        if (mainCamera == null)
+        {
+            mainCamera = Camera.main;
+            if (mainCamera == null)
+            {
+                Debug.LogError("Pas de caméra principale trouvée!");
+                return;
+            }
+        }
+
+        isVisible = true;
+        foreach (var renderer in spriteRenderers)
+        {
+            renderer.enabled = true;
+        }
+
+        Vector3 centerPosition = mainCamera.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 0));
+        centerPosition.z = 0;
+        transform.position = centerPosition;
+    }
+
+    private void HideViseur()
+    {
+        isVisible = false;
+        foreach (var renderer in spriteRenderers)
+        {
+            renderer.enabled = false;
+        }
+        if (player != null)
+        {
+            player.ResetFromViseur();
         }
     }
 
