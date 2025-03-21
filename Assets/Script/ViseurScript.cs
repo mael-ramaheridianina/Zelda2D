@@ -13,6 +13,11 @@ public class ViseurScript : MonoBehaviour
     private SpriteRenderer[] spriteRenderers; // Tableau pour tous les SpriteRenderer
     [SerializeField] private PlayerScript player;
     private int yPressCount = 0;
+    [SerializeField] private float resetDelay = 5f; // Délai de réinitialisation
+    private float resetTimer = 0f;
+    private bool isResetting = false;
+    [SerializeField] private Stamina1Script stamina1;
+    [SerializeField] private Stamina2Script stamina2;
 
     void Start()
     {
@@ -51,6 +56,8 @@ public class ViseurScript : MonoBehaviour
 
         if (isVisible)
         {
+            isResetting = false;
+            resetTimer = 0f;
             MoveViseur();
             
             // Gestion du compteur d'appuis sur Y
@@ -66,6 +73,18 @@ public class ViseurScript : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.R))
             {
                 HideViseur();
+            }
+        }
+        else if (!isVisible && (stamina1 != null && !stamina1.gameObject.activeSelf || 
+                               stamina2 != null && !stamina2.gameObject.activeSelf))
+        {
+            // Compte le temps quand on n'est pas en mode viseur
+            isResetting = true;
+            resetTimer += Time.deltaTime;
+
+            if (resetTimer >= resetDelay)
+            {
+                ResetStaminas();
             }
         }
     }
@@ -133,5 +152,13 @@ public class ViseurScript : MonoBehaviour
         
         Vector3 movement = new Vector3(horizontalInput, verticalInput, 0) * moveSpeed * Time.deltaTime;
         transform.position += movement;
+    }
+
+    private void ResetStaminas()
+    {
+        if (stamina1 != null) stamina1.Reset();
+        if (stamina2 != null) stamina2.Reset();
+        resetTimer = 0f;
+        isResetting = false;
     }
 }
