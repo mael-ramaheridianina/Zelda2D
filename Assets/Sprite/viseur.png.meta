@@ -8,6 +8,12 @@ TextureImporter:
   - first:
       213: -8364198688026764446
     second: viseur_1
+  - first:
+      213: -5572475746690861859
+    second: viseur_2
+  - first:
+      213: 8588444684135871967
+    second: viseur_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -120,9 +126,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 85
-        y: 163
-        width: 49
-        height: 49
+        y: 295
+        width: 153
+        height: 153
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,10 +147,10 @@ TextureImporter:
       name: viseur_1
       rect:
         serializedVersion: 2
-        x: 380
-        y: 45
-        width: 196
-        height: 226
+        x: 399
+        y: 348
+        width: 49
+        height: 49
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -155,6 +161,50 @@ TextureImporter:
       bones: []
       spriteID: 26b5061db956ceb80800000000000000
       internalID: -8364198688026764446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: viseur_2
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 278
+        width: 150
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd4f20725d69aa2b0800000000000000
+      internalID: -5572475746690861859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: viseur_3
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 47
+        width: 143
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd5b20bcfe8403770800000000000000
+      internalID: 8588444684135871967
       vertices: []
       indices: 
       edges: []
