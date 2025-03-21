@@ -12,6 +12,7 @@ public class ViseurScript : MonoBehaviour
     }
     private SpriteRenderer[] spriteRenderers; // Tableau pour tous les SpriteRenderer
     [SerializeField] private PlayerScript player;
+    private int yPressCount = 0;
 
     void Start()
     {
@@ -51,6 +52,17 @@ public class ViseurScript : MonoBehaviour
         if (isVisible)
         {
             MoveViseur();
+            
+            // Gestion du compteur d'appuis sur Y
+            if (Input.GetKeyDown(KeyCode.Y))
+            {
+                yPressCount++;
+                if (yPressCount >= 3)
+                {
+                    HideViseur();
+                }
+            }
+
             if (Input.GetKeyDown(KeyCode.R))
             {
                 HideViseur();
@@ -97,11 +109,13 @@ public class ViseurScript : MonoBehaviour
         Vector3 centerPosition = mainCamera.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 0));
         centerPosition.z = 0;
         transform.position = centerPosition;
+        yPressCount = 0; // Réinitialise le compteur au début du mode visé
     }
 
     private void HideViseur()
     {
         isVisible = false;
+        yPressCount = 0; // Réinitialise le compteur
         foreach (var renderer in spriteRenderers)
         {
             renderer.enabled = false;
