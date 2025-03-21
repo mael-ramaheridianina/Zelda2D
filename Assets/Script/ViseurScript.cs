@@ -6,6 +6,10 @@ public class ViseurScript : MonoBehaviour
     [SerializeField] private float moveSpeed = 5f;
     private Camera mainCamera;
     private bool isVisible = false;
+    public bool IsVisible 
+    { 
+        get { return isVisible; } 
+    }
     private SpriteRenderer[] spriteRenderers; // Tableau pour tous les SpriteRenderer
     [SerializeField] private PlayerScript player;
 
