@@ -18,6 +18,7 @@ public class ViseurScript : MonoBehaviour
     private bool isResetting = false;
     [SerializeField] private Stamina1Script stamina1;
     [SerializeField] private Stamina2Script stamina2;
+    [SerializeField] private FoudreScript foudre;
 
     void Start()
     {
@@ -67,6 +68,10 @@ public class ViseurScript : MonoBehaviour
                 if (yPressCount >= 3)
                 {
                     HideViseur();
+                }
+                else if (foudre != null)
+                {
+                    foudre.ShowFoudre(transform.position);
                 }
             }
 
