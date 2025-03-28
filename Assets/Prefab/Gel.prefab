@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 893452671749730001}
   - component: {fileID: 4241493596694332544}
   m_Layer: 0
-  m_Name: Gel_transparent_0
+  m_Name: Gel
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
