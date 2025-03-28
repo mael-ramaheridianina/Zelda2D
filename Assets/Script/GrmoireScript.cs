@@ -11,6 +11,7 @@ public class StaminaVesselScript : MonoBehaviour
     [SerializeField] private float visibleDuration = 2.5f;
     [SerializeField] private float fadeOutDuration = 0.3f;
 
+    [SerializeField] private ViseurScript viseur;
     private SpriteRenderer spriteRenderer;
     private bool isCollected = false;
     private Tween bounceAnimation;
@@ -23,7 +24,6 @@ public class StaminaVesselScript : MonoBehaviour
 
     private void StartBouncing()
     {
-        // Animation de rebond en boucle
         bounceAnimation = transform.DOMoveY(transform.position.y + jumpHeight, jumpDuration)
             .SetEase(Ease.InOutQuad)
             .SetLoops(-1, LoopType.Yoyo);
@@ -33,12 +33,13 @@ public class StaminaVesselScript : MonoBehaviour
     {
         if (!isCollected && other.CompareTag("Player"))
         {
-            bounceAnimation.Kill(); // Arrête l'animation de rebond
+            bounceAnimation.Kill();
             PlayerScript player = other.GetComponent<PlayerScript>();
-            if (player != null)
+            if (player != null && viseur != null)
             {
                 isCollected = true;
                 player.StartCelebration();
+                viseur.IncrementYPressCount();  // Incrémente le compteur Y
                 StartPickupSequence(other.transform.position);
             }
         }
