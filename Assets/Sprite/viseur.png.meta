@@ -119,10 +119,10 @@ TextureImporter:
       name: viseur_0
       rect:
         serializedVersion: 2
-        x: 399
-        y: 348
-        width: 49
-        height: 49
+        x: 260
+        y: 1014
+        width: 56
+        height: 225
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,10 +141,10 @@ TextureImporter:
       name: viseur_1
       rect:
         serializedVersion: 2
-        x: 328
-        y: 47
-        width: 143
-        height: 58
+        x: 761
+        y: 663
+        width: 154
+        height: 154
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,7 +163,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -172,7 +172,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      viseur_0: 5266002352823373673
+      viseur_1: -8364198688026764446
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
