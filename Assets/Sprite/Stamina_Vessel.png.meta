@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: df2eed0265a48ad4aad645ab0ea2cb89
+guid: dd026055813fc89409d08df9d5fbdd56
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4982006074126798737
-    second: HeartContainer-removebg-preview_0
+      213: -2611729659702816760
+    second: Stamina_Vessel_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: HeartContainer-removebg-preview_0
+      name: Stamina_Vessel_0
       rect:
         serializedVersion: 2
-        x: 123
-        y: 169
-        width: 249
-        height: 215
+        x: 39
+        y: 18
+        width: 177
+        height: 230
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f6075d21fdb5cdab0800000000000000
-      internalID: -4982006074126798737
+      spriteID: 800df0846b541cbd0800000000000000
+      internalID: -2611729659702816760
       vertices: []
       indices: 
       edges: []
