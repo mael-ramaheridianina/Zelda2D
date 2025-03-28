@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class TaminaVesselScript : MonoBehaviour
+public class StaminaVesselScript : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -12,5 +12,19 @@ public class TaminaVesselScript : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            PlayerScript player = other.GetComponent<PlayerScript>();
+            if (player != null)
+            {
+                player.StartCelebration();
+                // Optionally destroy the stamina vessel after collection
+                Destroy(gameObject);
+            }
+        }
     }
 }
