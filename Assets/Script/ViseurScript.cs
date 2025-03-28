@@ -54,13 +54,15 @@ public class ViseurScript : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Y))
             {
                 yPressCount++;
+                if (foudre != null)
+                {
+                    foudre.ShowFoudre(transform.position);
+                }
+                
+                // Quitte le mode visée après 3 appuis sur Y
                 if (yPressCount >= 3)
                 {
                     HideViseur();
-                }
-                else if (foudre != null)
-                {
-                    foudre.ShowFoudre(transform.position);
                 }
             }
 
