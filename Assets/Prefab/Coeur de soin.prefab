@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 4937530498263967480}
   - component: {fileID: 8081146884004302002}
   - component: {fileID: 2249108770051607610}
-  - component: {fileID: 6070934520618663342}
   m_Layer: 0
   m_Name: Coeur de soin
   m_TagString: Untagged
@@ -152,25 +151,3 @@ MonoBehaviour:
   jumpHeight: 1
   jumpDuration: 0.5
   fadeOutDuration: 0.3
---- !u!95 &6070934520618663342
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6977861967600959715}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: bc42961bcd7e3a641b0d5fe0edac8d3b, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
