@@ -13,6 +13,7 @@ public class ViseurScript : MonoBehaviour
     private SpriteRenderer[] spriteRenderers;
     [SerializeField] private PlayerScript player;
     private int yPressCount = 0;
+    private int maxYPresses = 3;  // Default maximum Y presses
     [SerializeField] private FoudreScript foudre;
 
     void Start()
@@ -59,8 +60,8 @@ public class ViseurScript : MonoBehaviour
                     foudre.ShowFoudre(transform.position);
                 }
                 
-                // Quitte le mode visée après 3 appuis sur Y
-                if (yPressCount >= 3)
+                // Changed to use maxYPresses instead of hardcoded 3
+                if (yPressCount >= maxYPresses)
                 {
                     HideViseur();
                 }
@@ -118,5 +119,11 @@ public class ViseurScript : MonoBehaviour
         
         Vector3 movement = new Vector3(horizontalInput, verticalInput, 0) * moveSpeed * Time.deltaTime;
         transform.position += movement;
+    }
+
+    public void IncreaseMaxYPresses()
+    {
+        maxYPresses++;
+        Debug.Log($"Maximum Y presses increased to: {maxYPresses}");
     }
 }

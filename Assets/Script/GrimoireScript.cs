@@ -1,7 +1,7 @@
 using UnityEngine;
 using DG.Tweening;
 
-public class StaminaVesselScript : MonoBehaviour
+public class GrimoireScript : MonoBehaviour
 {
     [Header("Animation Settings")]
     [SerializeField] private float floatHeight = 1.5f;
@@ -14,12 +14,40 @@ public class StaminaVesselScript : MonoBehaviour
     [SerializeField] private ViseurScript viseur;
     private SpriteRenderer spriteRenderer;
     private bool isCollected = false;
+    private bool isHidden = false;
     private Tween bounceAnimation;
 
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         StartBouncing();
+    }
+
+    private void Update()
+    {
+        if (viseur != null && !isCollected)
+        {
+            if (viseur.IsVisible)
+            {
+                // Cache le grimoire quand on entre en mode visée
+                if (!isHidden)
+                {
+                    isHidden = true;
+                    spriteRenderer.enabled = false;
+                    GetComponent<Collider2D>().enabled = false;
+                }
+            }
+            else
+            {
+                // Montre le grimoire quand on sort du mode visée
+                if (isHidden)
+                {
+                    isHidden = false;
+                    spriteRenderer.enabled = true;
+                    GetComponent<Collider2D>().enabled = true;
+                }
+            }
+        }
     }
 
     private void StartBouncing()
@@ -39,7 +67,7 @@ public class StaminaVesselScript : MonoBehaviour
             {
                 isCollected = true;
                 player.StartCelebration();
-                viseur.IncrementYPressCount();  // Incrémente le compteur Y
+                viseur.IncreaseMaxYPresses();  // Changé de IncrementYPressCount à IncreaseMaxYPresses
                 StartPickupSequence(other.transform.position);
             }
         }
