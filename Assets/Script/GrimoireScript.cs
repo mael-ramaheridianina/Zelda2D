@@ -12,6 +12,8 @@ public class GrimoireScript : MonoBehaviour
     [SerializeField] private float fadeOutDuration = 0.3f;
 
     [SerializeField] private ViseurScript viseur;
+    [SerializeField] private bool isUpgrade = false;
+    [SerializeField] private FoudreScript foudreScript;
     private SpriteRenderer spriteRenderer;
     private bool isCollected = false;
     private bool isHidden = false;
@@ -63,11 +65,22 @@ public class GrimoireScript : MonoBehaviour
         {
             bounceAnimation.Kill();
             PlayerScript player = other.GetComponent<PlayerScript>();
-            if (player != null && viseur != null)
+            if (player != null)
             {
                 isCollected = true;
                 player.StartCelebration();
-                viseur.IncreaseMaxYPresses();  // Changé de IncrementYPressCount à IncreaseMaxYPresses
+                
+                if (isUpgrade && foudreScript != null)
+                {
+                    Debug.Log("Grimoire d'amélioration collecté - Tentative d'amélioration de la foudre");
+                    foudreScript.UpgradeFoudre();
+                }
+                else if (viseur != null)
+                {
+                    Debug.Log("Grimoire normal collecté - Tentative d'augmentation du max Y");
+                    viseur.IncreaseMaxYPresses();
+                }
+                
                 StartPickupSequence(other.transform.position);
             }
         }
