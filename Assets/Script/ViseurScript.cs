@@ -90,6 +90,27 @@ public class ViseurScript : MonoBehaviour
         }
     }
 
+    void LateUpdate()
+    {
+        if (isVisible && mainCamera != null)
+        {
+            // Mouvement de caméra sans tremblements
+            Vector3 targetPosition = new Vector3(
+                transform.position.x,
+                transform.position.y,
+                mainCamera.transform.position.z
+            );
+            
+            // Damping plus fort pour réduire les oscillations
+            float smoothFactor = cameraSmoothSpeed * Time.unscaledDeltaTime;
+            mainCamera.transform.position = Vector3.Lerp(
+                mainCamera.transform.position,
+                targetPosition,
+                smoothFactor
+            );
+        }
+    }
+
     public void ShowViseur()
     {
         if (mainCamera == null)
@@ -182,28 +203,8 @@ public class ViseurScript : MonoBehaviour
         float horizontalInput = Input.GetAxisRaw("Horizontal");
         float verticalInput = Input.GetAxisRaw("Vertical");
         
-        // Utiliser Time.unscaledDeltaTime pour un mouvement uniforme 
-        // indépendamment du ralenti
         Vector3 movement = new Vector3(horizontalInput, verticalInput, 0) * moveSpeed * Time.unscaledDeltaTime;
         transform.position += movement;
-
-        // Mouvement de caméra sans tremblements
-        if (mainCamera != null)
-        {
-            // Calculer la position cible
-            Vector3 targetPosition = new Vector3(
-                transform.position.x,
-                transform.position.y,
-                mainCamera.transform.position.z
-            );
-            
-            // Utiliser unscaledDeltaTime pour éviter l'influence du ralenti
-            mainCamera.transform.position = Vector3.Lerp(
-                mainCamera.transform.position,
-                targetPosition,
-                cameraSmoothSpeed * Time.unscaledDeltaTime
-            );
-        }
     }
 
     public void IncreaseMaxYPresses()
