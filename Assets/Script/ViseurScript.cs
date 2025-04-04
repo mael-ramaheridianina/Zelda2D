@@ -102,6 +102,17 @@ public class ViseurScript : MonoBehaviour
             }
         }
 
+        // Désactiver le collider du player
+        if (player != null)
+        {
+            Collider2D playerCollider = player.GetComponent<Collider2D>();
+            if (playerCollider != null)
+            {
+                playerCollider.enabled = false;
+                Debug.Log("Player collider disabled");
+            }
+        }
+
         isVisible = true;
         foreach (var renderer in spriteRenderers)
         {
@@ -141,8 +152,17 @@ public class ViseurScript : MonoBehaviour
         {
             renderer.enabled = false;
         }
+        
         if (player != null)
         {
+            // Réactiver le collider du player
+            Collider2D playerCollider = player.GetComponent<Collider2D>();
+            if (playerCollider != null)
+            {
+                playerCollider.enabled = true;
+                Debug.Log("Player collider enabled");
+            }
+            
             player.ResetFromViseur();
         }
 
