@@ -20,6 +20,10 @@ public class ViseurScript : MonoBehaviour
     [SerializeField] private float cameraSmoothSpeed = 5f;
     private Vector3 cameraOffset;
 
+    [Header("Time Control Settings")]
+    [SerializeField] private float slowMotionTimeScale = 0.5f; // Vitesse du temps en mode visée
+    private float originalTimeScale;
+
     void Start()
     {
         Debug.Log("Start appelé");
@@ -30,7 +34,7 @@ public class ViseurScript : MonoBehaviour
             return;
         }
 
-        spriteRenderers = GetComponentsInChildren<SpriteRenderer>();
+        spriteRenderers = GetComponentsInChildren<SpriteRenderer>(true);
         if (spriteRenderers.Length == 0)
         {
             Debug.LogError("Aucun SpriteRenderer trouvé!");
@@ -47,6 +51,9 @@ public class ViseurScript : MonoBehaviour
         {
             cameraOffset = mainCamera.transform.position - transform.position;
         }
+
+        // Stocke la valeur originale du timeScale
+        originalTimeScale = Time.timeScale;
     }
 
     void Update()
@@ -110,12 +117,26 @@ public class ViseurScript : MonoBehaviour
         {
             cameraOffset = mainCamera.transform.position - centerPosition;
         }
+
+        // Ralentit le temps
+        originalTimeScale = Time.timeScale; // Sauvegarde l'échelle actuelle
+        Time.timeScale = slowMotionTimeScale;
+        Time.fixedDeltaTime = 0.02f * Time.timeScale; // Ajuste le fixedDeltaTime pour la physique
+        
+        Debug.Log($"Entering slow motion: {Time.timeScale}x speed");
     }
 
     private void HideViseur()
     {
         isVisible = false;
         yPressCount = 0;
+
+        // Restaure le temps normal
+        Time.timeScale = originalTimeScale;
+        Time.fixedDeltaTime = 0.02f; // Restaure la valeur par défaut
+        
+        Debug.Log($"Exiting slow motion, restored to {Time.timeScale}x speed");
+
         foreach (var renderer in spriteRenderers)
         {
             renderer.enabled = false;
@@ -141,22 +162,26 @@ public class ViseurScript : MonoBehaviour
         float horizontalInput = Input.GetAxisRaw("Horizontal");
         float verticalInput = Input.GetAxisRaw("Vertical");
         
-        Vector3 movement = new Vector3(horizontalInput, verticalInput, 0) * moveSpeed * Time.deltaTime;
+        // Utiliser Time.unscaledDeltaTime pour un mouvement uniforme 
+        // indépendamment du ralenti
+        Vector3 movement = new Vector3(horizontalInput, verticalInput, 0) * moveSpeed * Time.unscaledDeltaTime;
         transform.position += movement;
 
-        // Déplacement fluide de la caméra
+        // Mouvement de caméra sans tremblements
         if (mainCamera != null)
         {
-            Vector3 desiredPosition = transform.position + cameraOffset;
-            Vector3 smoothedPosition = Vector3.Lerp(
-                mainCamera.transform.position,
-                desiredPosition,
-                cameraSmoothSpeed * Time.deltaTime
-            );
-            mainCamera.transform.position = new Vector3(
-                smoothedPosition.x,
-                smoothedPosition.y,
+            // Calculer la position cible
+            Vector3 targetPosition = new Vector3(
+                transform.position.x,
+                transform.position.y,
                 mainCamera.transform.position.z
+            );
+            
+            // Utiliser unscaledDeltaTime pour éviter l'influence du ralenti
+            mainCamera.transform.position = Vector3.Lerp(
+                mainCamera.transform.position,
+                targetPosition,
+                cameraSmoothSpeed * Time.unscaledDeltaTime
             );
         }
     }
