@@ -16,6 +16,10 @@ public class ViseurScript : MonoBehaviour
     private int maxYPresses = 3;  // Default maximum Y presses
     [SerializeField] private FoudreScript foudre;
 
+    [Header("Camera Settings")]
+    [SerializeField] private float cameraSmoothSpeed = 5f;
+    private Vector3 cameraOffset;
+
     void Start()
     {
         Debug.Log("Start appelé");
@@ -38,6 +42,11 @@ public class ViseurScript : MonoBehaviour
             renderer.enabled = false;
         }
         isVisible = false;
+
+        if (mainCamera != null)
+        {
+            cameraOffset = mainCamera.transform.position - transform.position;
+        }
     }
 
     void Update()
@@ -96,6 +105,11 @@ public class ViseurScript : MonoBehaviour
         centerPosition.z = 0;
         transform.position = centerPosition;
         yPressCount = 0;
+
+        if (mainCamera != null)
+        {
+            cameraOffset = mainCamera.transform.position - centerPosition;
+        }
     }
 
     private void HideViseur()
@@ -110,6 +124,16 @@ public class ViseurScript : MonoBehaviour
         {
             player.ResetFromViseur();
         }
+
+        if (mainCamera != null && player != null)
+        {
+            // La caméra retournera au player via le PlayerScript
+            mainCamera.transform.position = new Vector3(
+                player.transform.position.x,
+                player.transform.position.y,
+                mainCamera.transform.position.z
+            );
+        }
     }
 
     private void MoveViseur()
@@ -119,6 +143,22 @@ public class ViseurScript : MonoBehaviour
         
         Vector3 movement = new Vector3(horizontalInput, verticalInput, 0) * moveSpeed * Time.deltaTime;
         transform.position += movement;
+
+        // Déplacement fluide de la caméra
+        if (mainCamera != null)
+        {
+            Vector3 desiredPosition = transform.position + cameraOffset;
+            Vector3 smoothedPosition = Vector3.Lerp(
+                mainCamera.transform.position,
+                desiredPosition,
+                cameraSmoothSpeed * Time.deltaTime
+            );
+            mainCamera.transform.position = new Vector3(
+                smoothedPosition.x,
+                smoothedPosition.y,
+                mainCamera.transform.position.z
+            );
+        }
     }
 
     public void IncreaseMaxYPresses()

@@ -4,7 +4,9 @@ public class EnemyScript : MonoBehaviour
 { 
     [Header("Combat Settings")]
     [SerializeField] private int damageAmount = 1;
-    
+    [SerializeField] private float maxHealth = 20f;  // 20 PV par défaut
+    private float currentHealth;
+
     [Header("Movement Settings")]
     [SerializeField] private float moveSpeed = 2f;
     [SerializeField] private float detectionRange = 5f;
@@ -65,6 +67,8 @@ public class EnemyScript : MonoBehaviour
         rightPatrolPoint = startPosition + Vector3.right * patrolDistance;
 
         mainCamera = Camera.main;
+
+        currentHealth = maxHealth;
     }
 
     private bool IsVisibleToCamera()
@@ -158,6 +162,23 @@ public class EnemyScript : MonoBehaviour
     public int GetDamageAmount()
     {
         return damageAmount;
+    }
+
+    public void TakeDamage(float damage)
+    {
+        currentHealth -= damage;
+        Debug.Log($"Enemy took {damage} damage. Health: {currentHealth}/{maxHealth}");
+
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
+    }
+
+    private void Die()
+    {
+        Debug.Log("Enemy died!");
+        Destroy(gameObject);
     }
 
     // Optionnel : Visualisation du range de détection dans l'éditeur
