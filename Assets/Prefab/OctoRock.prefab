@@ -174,7 +174,7 @@ MonoBehaviour:
   projectilePrefab: {fileID: 8180629345561044884, guid: 2a59840fb5e65564ab7683f260c92919, type: 3}
   shootDelay: 2
   damageAmount: 1
-  health: 3
+  health: 22
   knockbackForce: 5
   knockbackDuration: 0.2
   pauseDuration: 2
