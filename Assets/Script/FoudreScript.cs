@@ -114,16 +114,78 @@ public class FoudreScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log($"Foudre collided with {other.gameObject.name}, tag: {other.gameObject.tag}");
-        if (other.CompareTag("Enemy"))
+        float damage = damageLevels[currentLevel - 1];
+        
+        // Pour OctoRock
+        OctoRockScript octoRock = other.GetComponent<OctoRockScript>();
+        if (octoRock != null)
         {
-            EnemyScript enemy = other.GetComponent<EnemyScript>();
-            if (enemy != null)
+            Vector2 hitDirection = (octoRock.transform.position - transform.position).normalized;
+            
+            // Appliquer TakeHit plusieurs fois selon le niveau de dégâts
+            int damageCount = Mathf.RoundToInt(damage);
+            for (int i = 0; i < damageCount; i++)
             {
-                float damage = damageLevels[currentLevel - 1];
-                enemy.TakeDamage(damage);
-                Debug.Log($"Applied {damage} damage to enemy");
+                octoRock.TakeHit(hitDirection, 1f);
             }
+            
+            Debug.Log($"Foudre niveau {currentLevel} touche OctoRock: {damageCount} fois");
+            return;
         }
+        
+        // Cas 1: Enemy standard
+        EnemyScript enemy = other.GetComponent<EnemyScript>();
+        if (enemy != null)
+        {
+            enemy.TakeDamage(damage);
+            return;
+        }
+        
+        // Cas 2: Lanmola Head
+        Lanmola_HeadScript lanmolaHead = other.GetComponent<Lanmola_HeadScript>();
+        if (lanmolaHead != null)
+        {
+            ApplyDamageToLanmolaHead(lanmolaHead, damage);
+            return;
+        }
+        
+        // Cas 3: Lanmola Body
+        Lanmola_BodyScript lanmolaBody = other.GetComponent<Lanmola_BodyScript>();
+        if (lanmolaBody != null)
+        {
+            ApplyDamageToLanmolaBody(lanmolaBody, damage);
+            return;
+        }
+        
+        // Cas 4: Interface IDamageable (pour les futurs ennemis)
+        IDamageable damageable = other.GetComponent<IDamageable>();
+        if (damageable != null)
+        {
+            damageable.TakeDamage(damage);
+        }
+    }
+
+    private void ApplyDamageToLanmolaHead(Lanmola_HeadScript lanmola, float damage)
+    {
+        // Implémentation spéciale pour Lanmola Head
+        // Comme cette classe n'a pas de méthode TakeDamage, nous devons l'ajouter
+        lanmola.gameObject.SendMessage("ApplyDamage", damage, SendMessageOptions.DontRequireReceiver);
+    }
+
+    private void ApplyDamageToLanmolaBody(Lanmola_BodyScript lanmolaBody, float damage)
+    {
+        // Trouver la tête parente et lui appliquer les dégâts
+        Lanmola_HeadScript head = lanmolaBody.transform.root.GetComponent<Lanmola_HeadScript>();
+        if (head != null)
+        {
+            ApplyDamageToLanmolaHead(head, damage);
+        }
+    }
+
+    private void ApplyDamageToOctoRock(OctoRockScript octoRock, float damage)
+    {
+        // OctoRock a déjà une méthode TakeHit mais avec des paramètres différents
+        Vector2 hitDirection = (octoRock.transform.position - transform.position).normalized;
+        octoRock.TakeHit(hitDirection, damage);
     }
 }

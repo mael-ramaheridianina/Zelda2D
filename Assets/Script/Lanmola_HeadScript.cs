@@ -24,6 +24,7 @@ public class Lanmola_HeadScript : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Camera mainCamera;
     private bool isVisible = true;
+    private int health = 100; // Ajouter une variable pour la santé
     
     void Start()
     {
@@ -184,5 +185,20 @@ public class Lanmola_HeadScript : MonoBehaviour
         return viewportPoint.x >= 0 && viewportPoint.x <= 1 && 
                viewportPoint.y >= 0 && viewportPoint.y <= 1 && 
                viewportPoint.z > 0;
+    }
+
+    public void ApplyDamage(float damage)
+    {
+        // Convertir en int si nécessaire
+        int damageInt = Mathf.CeilToInt(damage);
+        
+        // Réduire la santé
+        health -= damageInt;
+        
+        // Gérer la mort
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }

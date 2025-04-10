@@ -239,7 +239,7 @@ public class OctoRockScript : MonoBehaviour
 
     public void TakeHit(Vector2 hitDirection, float force)
     {
-        health--;
+        health--;  // Réduit la santé de 1, indépendamment de la force
         if (health <= 0)
         {
             Die();
