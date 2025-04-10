@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 6152942728572018781}
   - component: {fileID: 522758714702793613}
   - component: {fileID: 5590113094086662810}
-  - component: {fileID: -7252541895386551092}
+  - component: {fileID: 1550137962133690838}
+  - component: {fileID: -2353022113865157300}
   m_Layer: 0
   m_Name: OctoRock
   m_TagString: Enemy
@@ -180,7 +181,34 @@ MonoBehaviour:
   knockbackDuration: 0.2
   pauseDuration: 2
   timeBeforeHide: 2
---- !u!114 &-7252541895386551092
+--- !u!50 &1550137962133690838
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4481350464333780811}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &-2353022113865157300
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
