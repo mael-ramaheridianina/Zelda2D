@@ -27,7 +27,6 @@ public class OctoRockScript : MonoBehaviour
         Left = 3
     }
 
-    // Ajoutez ces variables en haut de la classe
     [Header("Projectile Settings")]
     [SerializeField] private GameObject projectilePrefab;
     [SerializeField] private float shootDelay = 2f;
@@ -36,14 +35,13 @@ public class OctoRockScript : MonoBehaviour
 
     [Header("Combat Settings")]
     [SerializeField] private int damageAmount = 1;
-    [SerializeField] private int health = 3;
     [SerializeField] private float knockbackForce = 5f;
     [SerializeField] private float knockbackDuration = 0.2f;
     private bool isKnockedBack = false;
     private float knockbackTimer = 0f;
     private Rigidbody2D rb;
 
-    [SerializeField] private float pauseDuration = 0.5f; // Durée de la pause en seconde
+    [SerializeField] private float pauseDuration = 0.5f;
     private bool isPlayingAnimation = false;
 
     [Header("Animation Settings")]
@@ -237,30 +235,15 @@ public class OctoRockScript : MonoBehaviour
         return damageAmount;
     }
 
-    public void TakeHit(Vector2 hitDirection, float force)
+    // Méthode pour appliquer le knockback uniquement (sans gestion de santé)
+    public void ApplyKnockback(Vector2 hitDirection)
     {
-        health--;  // Réduit la santé de 1, indépendamment de la force
-        if (health <= 0)
-        {
-            Die();
-            return;
-        }
-
-        // Appliquer le knockback
         if (!isKnockedBack)
         {
             isKnockedBack = true;
             knockbackTimer = knockbackDuration;
             rb.linearVelocity = hitDirection * knockbackForce;
         }
-    }
-
-    private void Die()
-    {
-        // Désactiver les comportements
-        enabled = false;
-        animator.SetBool(IsEmerging, false);
-        Destroy(gameObject, 0.5f);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

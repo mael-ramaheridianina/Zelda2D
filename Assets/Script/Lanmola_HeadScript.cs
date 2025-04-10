@@ -24,7 +24,6 @@ public class Lanmola_HeadScript : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Camera mainCamera;
     private bool isVisible = true;
-    private int health = 100; // Ajouter une variable pour la santé
     
     void Start()
     {
@@ -187,18 +186,15 @@ public class Lanmola_HeadScript : MonoBehaviour
                viewportPoint.z > 0;
     }
 
-    public void ApplyDamage(float damage)
+    public void OnHeadDestroyed()
     {
-        // Convertir en int si nécessaire
-        int damageInt = Mathf.CeilToInt(damage);
-        
-        // Réduire la santé
-        health -= damageInt;
-        
-        // Gérer la mort
-        if (health <= 0)
+        // Détruire tous les segments du corps
+        foreach (var bodyPart in bodyParts)
         {
-            Destroy(gameObject);
+            if (bodyPart != null)
+            {
+                Destroy(bodyPart);
+            }
         }
     }
 }
