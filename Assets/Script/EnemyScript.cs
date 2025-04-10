@@ -200,6 +200,22 @@ public class EnemyScript : MonoBehaviour
         Destroy(gameObject);
     }
 
+    public float GetCurrentHealth()
+    {
+        return currentHealth;
+    }
+
+    public float GetMaxHealth()
+    {
+        return maxHealth;
+    }
+
+    public string GetEnemyName()
+    {
+        // Utiliser le nom de l'objet ou une variable personnalisée
+        return gameObject.name.Replace("(Clone)", "");
+    }
+
     // Optionnel : Visualisation du range de détection dans l'éditeur
     private void OnDrawGizmosSelected()
     {
