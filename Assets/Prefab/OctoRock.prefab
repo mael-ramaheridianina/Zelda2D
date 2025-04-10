@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6152942728572018781}
   - component: {fileID: 522758714702793613}
   - component: {fileID: 5590113094086662810}
+  - component: {fileID: -7252541895386551092}
   m_Layer: 0
   m_Name: OctoRock
   m_TagString: Enemy
@@ -179,3 +180,25 @@ MonoBehaviour:
   knockbackDuration: 0.2
   pauseDuration: 2
   timeBeforeHide: 2
+--- !u!114 &-7252541895386551092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4481350464333780811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc8ce70a6f5b2b149b07f7063a05445d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 1
+  maxHealth: 20
+  moveSpeed: 2
+  detectionRange: 5
+  disableDetection: 1
+  patrolRange: 3
+  returnSpeed: 1.5
+  disablePatrol: 1
+  patrolSpeed: 1
+  patrolDistance: 2
