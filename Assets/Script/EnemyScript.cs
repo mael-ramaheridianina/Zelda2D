@@ -10,10 +10,12 @@ public class EnemyScript : MonoBehaviour
     [Header("Movement Settings")]
     [SerializeField] private float moveSpeed = 2f;
     [SerializeField] private float detectionRange = 5f;
+    [SerializeField] private bool disableDetection = false;  // Option pour désactiver la détection
     [SerializeField] private float patrolRange = 3f;  // Rayon de la zone de patrouille
     [SerializeField] private float returnSpeed = 1.5f; // Vitesse de retour à la zone
 
     [Header("Patrol Settings")]
+    [SerializeField] private bool disablePatrol = false;  // Option pour désactiver la patrouille
     [SerializeField] private float patrolSpeed = 1f;
     [SerializeField] private float patrolDistance = 2f; // Distance de patrouille gauche/droite
     
@@ -106,7 +108,9 @@ public class EnemyScript : MonoBehaviour
         if (playerTransform != null)
         {
             float distanceToPlayer = Vector2.Distance(transform.position, playerTransform.position);
-            isPlayerInRange = distanceToPlayer <= detectionRange;
+            
+            // Utilise le flag de détection
+            isPlayerInRange = !disableDetection && distanceToPlayer <= detectionRange;
 
             if (isPlayerInRange)
             {
@@ -117,6 +121,13 @@ public class EnemyScript : MonoBehaviour
             }
             else
             {
+                // Si la patrouille est désactivée, l'ennemi reste immobile
+                if (disablePatrol)
+                {
+                    movement = Vector2.zero;
+                    return;
+                }
+                
                 // Reste du code de patrouille inchangé
                 isReturning = false;
                 
@@ -184,21 +195,28 @@ public class EnemyScript : MonoBehaviour
     // Optionnel : Visualisation du range de détection dans l'éditeur
     private void OnDrawGizmosSelected()
     {
-        // Zone de détection du player (rouge)
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, detectionRange);
-
-        // Zone de patrouille (bleue)
-        Gizmos.color = Color.blue;
-        Vector3 startPos = Application.isPlaying ? startPosition : transform.position;
-        Gizmos.DrawWireSphere(startPos, patrolRange);
-
-        // Visualisation des points de patrouille
-        if (Application.isPlaying)
+        // Zone de détection du player (rouge) - seulement si détection activée
+        if (!disableDetection)
         {
-            Gizmos.color = Color.yellow;
-            Gizmos.DrawWireSphere(leftPatrolPoint, 0.2f);
-            Gizmos.DrawWireSphere(rightPatrolPoint, 0.2f);
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireSphere(transform.position, detectionRange);
+        }
+
+        // Zone de patrouille (bleue) et points de patrouille - seulement si patrouille activée
+        if (!disablePatrol)
+        {
+            // Zone de patrouille (bleue)
+            Gizmos.color = Color.blue;
+            Vector3 startPos = Application.isPlaying ? startPosition : transform.position;
+            Gizmos.DrawWireSphere(startPos, patrolRange);
+
+            // Visualisation des points de patrouille
+            if (Application.isPlaying)
+            {
+                Gizmos.color = Color.yellow;
+                Gizmos.DrawWireSphere(leftPatrolPoint, 0.2f);
+                Gizmos.DrawWireSphere(rightPatrolPoint, 0.2f);
+            }
         }
     }
 }
