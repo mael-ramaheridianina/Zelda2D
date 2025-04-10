@@ -189,6 +189,14 @@ public class EnemyScript : MonoBehaviour
     private void Die()
     {
         Debug.Log("Enemy died!");
+        
+        // Vérifier si c'est un Lanmola_Head et détruire ses segments
+        Lanmola_HeadScript lanmolaHead = GetComponent<Lanmola_HeadScript>();
+        if (lanmolaHead != null)
+        {
+            lanmolaHead.OnHeadDestroyed();
+        }
+        
         Destroy(gameObject);
     }
 
