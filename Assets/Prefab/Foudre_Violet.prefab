@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1286282084761392107}
   - component: {fileID: 2292108161358361752}
   - component: {fileID: 6294425988514341789}
+  - component: {fileID: -7036821222890767718}
   m_Layer: 0
   m_Name: Foudre_Violet
   m_TagString: Untagged
@@ -100,3 +101,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 033228e669a4e324d865ead70c17e3a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  displayDuration: 0.5
+  lightningSprites:
+  - {fileID: 8136273635138771099, guid: 77e29405d58827148a4e37899f2b6093, type: 3}
+  - {fileID: 6416988383894880698, guid: e9d5d208a7e86bf4a874ee2a810d94e7, type: 3}
+  damageLevels:
+  - 21
+  - 42
+  - 70
+  radiusLevels:
+  - 11
+  - 11
+  - 11
+--- !u!58 &-7036821222890767718
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2306150894699760345}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 11

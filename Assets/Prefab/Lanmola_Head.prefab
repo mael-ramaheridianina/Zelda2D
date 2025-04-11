@@ -198,7 +198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 1
-  maxHealth: 20
+  maxHealth: 63
   moveSpeed: 2
   detectionRange: 5
   disableDetection: 1

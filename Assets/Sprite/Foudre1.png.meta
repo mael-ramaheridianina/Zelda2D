@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: dd026055813fc89409d08df9d5fbdd56
+guid: 77e29405d58827148a4e37899f2b6093
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2611729659702816760
-    second: Stamina_Vessel_0
+      213: 8136273635138771099
+    second: "\u2014Pngtree\u2014lightning design lightning effect natural_3916935_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Stamina_Vessel_0
+      name: "\u2014Pngtree\u2014lightning design lightning effect natural_3916935_0"
       rect:
         serializedVersion: 2
-        x: 39
-        y: 18
-        width: 177
-        height: 230
+        x: 272
+        y: 0
+        width: 1744
+        height: 2200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 800df0846b541cbd0800000000000000
-      internalID: -2611729659702816760
+      spriteID: b9892d963c9d9e070800000000000000
+      internalID: 8136273635138771099
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Stamina_Vessel_0: -2611729659702816760
+      "\u2014Pngtree\u2014lightning design lightning effect natural_3916935_0": 8136273635138771099
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
