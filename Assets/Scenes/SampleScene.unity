@@ -412,8 +412,8 @@ MonoBehaviour:
   moveSpeed: 5
   player: {fileID: 1750844486}
   foudre: {fileID: 200970675}
-  cameraSmoothSpeed: 5
-  slowMotionTimeScale: 0.5
+  cameraSmoothSpeed: 20
+  slowMotionTimeScale: 0.3
 --- !u!212 &369230875
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2732,6 +2732,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1782165944}
   - component: {fileID: 1782165943}
+  - component: {fileID: 1782165945}
   m_Layer: 0
   m_Name: UIManager
   m_TagString: Untagged
@@ -2762,12 +2763,48 @@ Transform:
   m_GameObject: {fileID: 1782165942}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.196728, y: 1197.6923, z: -423.12946}
+  m_LocalPosition: {x: -6.71, y: 1209.46, z: -423.12946}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &1782165945
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782165942}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 0.5
 --- !u!1 &1793078884
 GameObject:
   m_ObjectHideFlags: 0
@@ -3374,9 +3411,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 369230874}
     - target: {fileID: 4482048926089485003, guid: f110831ad0a1c6543b48cf85a8eb4c15, type: 3}
+      propertyPath: maxScale
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4482048926089485003, guid: f110831ad0a1c6543b48cf85a8eb4c15, type: 3}
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 889382058}
+    - target: {fileID: 4482048926089485003, guid: f110831ad0a1c6543b48cf85a8eb4c15, type: 3}
+      propertyPath: moveTowardsCameraSpeed
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7105681310819355472, guid: f110831ad0a1c6543b48cf85a8eb4c15, type: 3}
       propertyPath: m_Name
       value: link_collider
