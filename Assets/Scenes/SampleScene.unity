@@ -414,6 +414,7 @@ MonoBehaviour:
   foudre: {fileID: 200970675}
   cameraSmoothSpeed: 20
   slowMotionTimeScale: 0.3
+  vulnerableInTargetMode: 1
 --- !u!212 &369230875
 SpriteRenderer:
   m_ObjectHideFlags: 0
