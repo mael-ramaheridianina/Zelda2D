@@ -112,6 +112,11 @@ public class FoudreScript : MonoBehaviour
         return radiusLevels[currentLevel - 1];
     }
 
+    public int GetCurrentLevel()
+    {
+        return currentLevel;
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         float damage = damageLevels[currentLevel - 1];
@@ -125,11 +130,11 @@ public class FoudreScript : MonoBehaviour
             Debug.Log($"Appliqué {damage} dégâts à {other.gameObject.name}");
             
             // Si nous avons un UIManager, afficher les infos de santé
-            UIManager uiManager = FindObjectOfType<UIManager>();
+            UIManager uiManager = FindFirstObjectByType<UIManager>();
             if (uiManager != null)
             {
                 string enemyName = other.gameObject.name.Replace("(Clone)", "");
-                uiManager.ShowEnemyHealth(enemyName, enemy.GetCurrentHealth(), enemy.GetMaxHealth(), enemy);
+                uiManager.ShowEnemyHealth(enemyName, enemy.GetCurrentHealth(), enemy.GetMaxHealth());
             }
         }
     }

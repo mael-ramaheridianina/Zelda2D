@@ -12,8 +12,6 @@ public class ViseurScript : MonoBehaviour
     }
     private SpriteRenderer[] spriteRenderers;
     [SerializeField] private PlayerScript player;
-    private int yPressCount = 0;
-    private int maxYPresses = 3;  // Default maximum Y presses
     [SerializeField] private FoudreScript foudre;
 
     [Header("Camera Settings")]
@@ -23,6 +21,10 @@ public class ViseurScript : MonoBehaviour
     [Header("Time Control Settings")]
     [SerializeField] private float slowMotionTimeScale = 0.5f; // Vitesse du temps en mode visée
     private float originalTimeScale;
+
+    [Header("Target Mode Duration Settings")]
+    [SerializeField] private float[] targetModeDurations = { 1.0f, 2.0f, 3.0f }; // Durées pour niveaux 1, 2, 3
+    private float targetModeTimer = 0f;
 
     void Start()
     {
@@ -68,26 +70,58 @@ public class ViseurScript : MonoBehaviour
         {
             MoveViseur();
             
+            // Gestion du minuteur pour le mode visé
+            if (foudre != null)
+            {
+                int currentLevel = foudre.GetCurrentLevel();
+                float maxDuration = GetTargetModeDurationForLevel(currentLevel);
+                
+                targetModeTimer += Time.unscaledDeltaTime; // Utiliser unscaledDeltaTime car le temps est ralenti
+                
+                // Afficher le temps restant si on approche de la limite
+                float remainingTime = maxDuration - targetModeTimer;
+                if (remainingTime <= 3.0f)
+                {
+                    Debug.Log($"Temps restant en mode visé: {remainingTime:F1} secondes");
+                }
+                
+                // Quitter le mode visé quand le temps est écoulé
+                if (targetModeTimer >= maxDuration)
+                {
+                    Debug.Log("Temps écoulé, sortie du mode visé");
+                    HideViseur();
+                    return;
+                }
+            }
+            
+            // Appuyer sur Y pour déclencher la foudre (sans limite du nombre d'appuis)
             if (Input.GetKeyDown(KeyCode.Y))
             {
-                yPressCount++;
                 if (foudre != null)
                 {
                     foudre.ShowFoudre(transform.position);
                 }
-                
-                // Changed to use maxYPresses instead of hardcoded 3
-                if (yPressCount >= maxYPresses)
-                {
-                    HideViseur();
-                }
             }
 
+            // Toujours permettre de quitter manuellement avec R
             if (Input.GetKeyDown(KeyCode.R))
             {
                 HideViseur();
             }
         }
+    }
+
+    // Obtenir la durée maximale selon le niveau
+    private float GetTargetModeDurationForLevel(int level)
+    {
+        // S'assurer que l'index est valide
+        if (level >= 1 && level <= targetModeDurations.Length)
+        {
+            return targetModeDurations[level - 1];
+        }
+        
+        // Valeur par défaut
+        return 1.0f;
     }
 
     void LateUpdate()
@@ -143,7 +177,6 @@ public class ViseurScript : MonoBehaviour
         Vector3 centerPosition = mainCamera.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 0));
         centerPosition.z = 0;
         transform.position = centerPosition;
-        yPressCount = 0;
 
         if (mainCamera != null)
         {
@@ -156,12 +189,17 @@ public class ViseurScript : MonoBehaviour
         Time.fixedDeltaTime = 0.02f * Time.timeScale; // Ajuste le fixedDeltaTime pour la physique
         
         Debug.Log($"Entering slow motion: {Time.timeScale}x speed");
+
+        // Réinitialiser le minuteur du mode visé
+        targetModeTimer = 0f;
     }
 
     private void HideViseur()
     {
         isVisible = false;
-        yPressCount = 0;
+
+        // Réinitialiser le minuteur
+        targetModeTimer = 0f;
 
         // Restaure le temps normal
         Time.timeScale = originalTimeScale;
@@ -207,9 +245,11 @@ public class ViseurScript : MonoBehaviour
         transform.position += movement;
     }
 
-    public void IncreaseMaxYPresses()
+    // Méthode pour éventuellement prolonger la durée
+    public void ExtendTargetModeDuration(float additionalTime)
     {
-        maxYPresses++;
-        Debug.Log($"Maximum Y presses increased to: {maxYPresses}");
+        // Peut être utilisé pour des power-ups qui prolongent le temps
+        targetModeTimer -= additionalTime;
+        if (targetModeTimer < 0) targetModeTimer = 0;
     }
 }

@@ -77,8 +77,8 @@ public class GrimoireScript : MonoBehaviour
                 }
                 else if (viseur != null)
                 {
-                    Debug.Log("Grimoire normal collecté - Tentative d'augmentation du max Y");
-                    viseur.IncreaseMaxYPresses();
+                    Debug.Log("Grimoire normal collecté - Prolongement du temps en mode visée");
+                    viseur.ExtendTargetModeDuration(1.0f); // Ajoute 1 seconde au temps de visée
                 }
                 
                 StartPickupSequence(other.transform.position);

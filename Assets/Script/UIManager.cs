@@ -47,6 +47,11 @@ public class UIManager : MonoBehaviour
             healthDisplayCoroutine = StartCoroutine(TrackEnemyHealthCoroutine(enemyName, maxHealth));
         }
     }
+
+    public void ShowEnemyHealth(string enemyName, float currentHealth, float maxHealth)
+    {
+        // Code pour afficher la santé
+    }
     
     private IEnumerator TrackEnemyHealthCoroutine(string enemyName, float maxHealth)
     {
