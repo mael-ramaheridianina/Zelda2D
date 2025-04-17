@@ -26,6 +26,9 @@ public class ViseurScript : MonoBehaviour
     [SerializeField] private float[] targetModeDurations = { 1.0f, 2.0f, 3.0f }; // Durées pour niveaux 1, 2, 3
     private float targetModeTimer = 0f;
 
+    [SerializeField] private float inputProtectionTime = 0.2f; // Délai de protection pour éviter la double détection
+    private float inputProtectionTimer = 0f;
+
     void Start()
     {
         Debug.Log("Start appelé");
@@ -66,6 +69,12 @@ public class ViseurScript : MonoBehaviour
             if (mainCamera == null) return;
         }
 
+        // Décompte du délai de protection des inputs
+        if (inputProtectionTimer > 0)
+        {
+            inputProtectionTimer -= Time.unscaledDeltaTime;
+        }
+
         if (isVisible)
         {
             MoveViseur();
@@ -94,19 +103,23 @@ public class ViseurScript : MonoBehaviour
                 }
             }
             
-            // Appuyer sur Y pour déclencher la foudre (sans limite du nombre d'appuis)
-            if (Input.GetKeyDown(KeyCode.Y))
+            // Vérifier qu'on est hors du délai de protection avant de traiter les inputs
+            if (inputProtectionTimer <= 0)
             {
-                if (foudre != null)
+                // Appuyer sur Y pour déclencher la foudre
+                if (Input.GetKeyDown(KeyCode.Y))
                 {
-                    foudre.ShowFoudre(transform.position);
+                    if (foudre != null)
+                    {
+                        foudre.ShowFoudre(transform.position);
+                    }
                 }
-            }
 
-            // Toujours permettre de quitter manuellement avec R
-            if (Input.GetKeyDown(KeyCode.R))
-            {
-                HideViseur();
+                // Permettre de quitter manuellement avec R
+                if (Input.GetKeyDown(KeyCode.R))
+                {
+                    HideViseur();
+                }
             }
         }
     }
@@ -192,6 +205,9 @@ public class ViseurScript : MonoBehaviour
 
         // Réinitialiser le minuteur du mode visé
         targetModeTimer = 0f;
+
+        // Ajouter le délai de protection pour éviter la double détection de touches
+        inputProtectionTimer = inputProtectionTime;
     }
 
     private void HideViseur()

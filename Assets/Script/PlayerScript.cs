@@ -65,6 +65,9 @@ public class PlayerScript : MonoBehaviour
     private bool isZooming = false;
     private float zoomTimer = 0f;
 
+    private float lastRKeyPressTime = -1f;
+    private float rKeyPressDelay = 0.2f; // Délai minimum entre deux appuis sur R
+
     void Start()
     {
          rb = GetComponent<Rigidbody2D>();
@@ -95,7 +98,12 @@ public class PlayerScript : MonoBehaviour
     {        
         if (Input.GetKeyDown(KeyCode.R) && !isZooming && !isCelebrating && !isKnockedBack)
         {
-            StartZoomEffect();
+            float currentTime = Time.time;
+            if (currentTime - lastRKeyPressTime > rKeyPressDelay)
+            {
+                lastRKeyPressTime = currentTime;
+                StartZoomEffect();
+            }
         }
 
         if (isZooming)
