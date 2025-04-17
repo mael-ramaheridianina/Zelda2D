@@ -134,6 +134,7 @@ public class FoudreScript : MonoBehaviour
             if (uiManager != null)
             {
                 string enemyName = other.gameObject.name.Replace("(Clone)", "");
+                // Utilisez la version avec 3 paramètres uniquement
                 uiManager.ShowEnemyHealth(enemyName, enemy.GetCurrentHealth(), enemy.GetMaxHealth());
             }
         }

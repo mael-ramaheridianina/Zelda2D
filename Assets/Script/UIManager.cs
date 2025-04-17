@@ -50,7 +50,20 @@ public class UIManager : MonoBehaviour
 
     public void ShowEnemyHealth(string enemyName, float currentHealth, float maxHealth)
     {
-        // Code pour afficher la santé
+        if (damageInfoText != null)
+        {
+            if (healthDisplayCoroutine != null)
+            {
+                StopCoroutine(healthDisplayCoroutine);
+            }
+            
+            // Afficher directement sans suivi d'ennemi
+            damageInfoText.gameObject.SetActive(true);
+            damageInfoText.text = $"{enemyName} : {Mathf.Ceil(currentHealth)}/{maxHealth} PV";
+            
+            // Masquer après quelques secondes
+            healthDisplayCoroutine = StartCoroutine(HideTextAfterDelay(3.0f));
+        }
     }
     
     private IEnumerator TrackEnemyHealthCoroutine(string enemyName, float maxHealth)
@@ -78,5 +91,11 @@ public class UIManager : MonoBehaviour
         // Masquer le texte
         damageInfoText.gameObject.SetActive(false);
         currentEnemy = null;
+    }
+
+    private IEnumerator HideTextAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        damageInfoText.gameObject.SetActive(false);
     }
 }
