@@ -34,7 +34,7 @@ public class UIManager : MonoBehaviour
         }
     }
     
-    public void ShowEnemyHealth(string enemyName, float currentHealth, float maxHealth, EnemyScript enemy)
+    public void ShowEnemyHealth(string enemyName, float currentHealth, float maxHealth, EnemyScript enemy = null)
     {
         if (damageInfoText != null)
         {
@@ -43,26 +43,28 @@ public class UIManager : MonoBehaviour
                 StopCoroutine(healthDisplayCoroutine);
             }
             
-            currentEnemy = enemy;
-            healthDisplayCoroutine = StartCoroutine(TrackEnemyHealthCoroutine(enemyName, maxHealth));
-        }
-    }
-
-    public void ShowEnemyHealth(string enemyName, float currentHealth, float maxHealth)
-    {
-        if (damageInfoText != null)
-        {
-            if (healthDisplayCoroutine != null)
+            // Si nous avons une référence à l'ennemi, suivre sa santé en temps réel
+            if (enemy != null)
             {
-                StopCoroutine(healthDisplayCoroutine);
+                currentEnemy = enemy;
+                healthDisplayCoroutine = StartCoroutine(TrackEnemyHealthCoroutine(enemyName, maxHealth));
             }
-            
-            // Afficher directement sans suivi d'ennemi
-            damageInfoText.gameObject.SetActive(true);
-            damageInfoText.text = $"{enemyName} : {Mathf.Ceil(currentHealth)}/{maxHealth} PV";
-            
-            // Masquer après quelques secondes
-            healthDisplayCoroutine = StartCoroutine(HideTextAfterDelay(3.0f));
+            else
+            {
+                // Sinon, afficher une seule fois
+                damageInfoText.gameObject.SetActive(true);
+                
+                if (currentHealth <= 0)
+                {
+                    damageInfoText.text = $"{enemyName} : Vaincu!";
+                    healthDisplayCoroutine = StartCoroutine(HideTextAfterDelay(1.5f));
+                }
+                else
+                {
+                    damageInfoText.text = $"{enemyName} : {Mathf.Ceil(currentHealth)}/{maxHealth} PV";
+                    healthDisplayCoroutine = StartCoroutine(HideTextAfterDelay(3.0f));
+                }
+            }
         }
     }
     
