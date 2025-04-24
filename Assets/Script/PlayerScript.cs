@@ -98,11 +98,15 @@ public class PlayerScript : MonoBehaviour
     {        
         if (Input.GetKeyDown(KeyCode.R) && !isZooming && !isCelebrating && !isKnockedBack)
         {
-            float currentTime = Time.time;
-            if (currentTime - lastRKeyPressTime > rKeyPressDelay)
+            // Vérifier si le mode visée est disponible (pas en cooldown)
+            if (viseur != null && viseur.IsTargetModeAvailable())
             {
-                lastRKeyPressTime = currentTime;
                 StartZoomEffect();
+            }
+            else
+            {
+                // Feedback visuel ou sonore pour indiquer que le mode visée n'est pas disponible
+                Debug.Log("Mode visée en cooldown!");
             }
         }
 

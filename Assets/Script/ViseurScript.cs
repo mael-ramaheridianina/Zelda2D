@@ -26,6 +26,12 @@ public class ViseurScript : MonoBehaviour
     [SerializeField] private float[] targetModeDurations = { 1.0f, 2.0f, 3.0f }; // Durées pour niveaux 1, 2, 3
     private float targetModeTimer = 0f;
 
+    [Header("Cooldown Settings")]
+    [SerializeField] private float[] targetModeCooldowns = { 5.0f, 3.0f, 1.5f }; // Temps d'attente entre utilisations
+    private float cooldownTimer = 0f;
+    private bool isCooldownActive = false;
+    private bool timeExpired = false; // Nouveau booléen pour suivre si le temps a expiré
+
     [SerializeField] private float inputProtectionTime = 0.2f; // Délai de protection pour éviter la double détection
     private float inputProtectionTimer = 0f;
 
@@ -69,6 +75,25 @@ public class ViseurScript : MonoBehaviour
             if (mainCamera == null) return;
         }
 
+        // Gestion du cooldown si actif
+        if (isCooldownActive)
+        {
+            cooldownTimer -= Time.deltaTime;
+
+            // Afficher le temps de cooldown restant 
+            if (cooldownTimer <= 3.0f)
+            {
+                Debug.Log($"Cooldown restant: {cooldownTimer:F1} secondes");
+            }
+
+            // Désactiver le cooldown quand terminé
+            if (cooldownTimer <= 0)
+            {
+                isCooldownActive = false;
+                Debug.Log("Cooldown terminé, mode visée à nouveau disponible");
+            }
+        }
+
         // Décompte du délai de protection des inputs
         if (inputProtectionTimer > 0)
         {
@@ -97,6 +122,7 @@ public class ViseurScript : MonoBehaviour
                 // Quitter le mode visé quand le temps est écoulé
                 if (targetModeTimer >= maxDuration)
                 {
+                    timeExpired = true; // Marquer que le temps a expiré
                     Debug.Log("Temps écoulé, sortie du mode visé");
                     HideViseur();
                     return;
@@ -124,6 +150,12 @@ public class ViseurScript : MonoBehaviour
         }
     }
 
+    // Méthode pour vérifier si le mode visée est disponible
+    public bool IsTargetModeAvailable()
+    {
+        return !isCooldownActive;
+    }
+
     // Obtenir la durée maximale selon le niveau
     private float GetTargetModeDurationForLevel(int level)
     {
@@ -135,6 +167,19 @@ public class ViseurScript : MonoBehaviour
         
         // Valeur par défaut
         return 1.0f;
+    }
+
+    // Obtenir le temps de cooldown selon le niveau
+    private float GetCooldownForLevel(int level)
+    {
+        // S'assurer que l'index est valide
+        if (level >= 1 && level <= targetModeCooldowns.Length)
+        {
+            return targetModeCooldowns[level - 1];
+        }
+        
+        // Valeur par défaut
+        return 5.0f;
     }
 
     void LateUpdate()
@@ -160,6 +205,13 @@ public class ViseurScript : MonoBehaviour
 
     public void ShowViseur()
     {
+        // Vérifier d'abord si le cooldown est actif
+        if (isCooldownActive)
+        {
+            Debug.Log($"Mode visée en cooldown! Temps restant: {cooldownTimer:F1} secondes");
+            return;
+        }
+
         if (mainCamera == null)
         {
             mainCamera = Camera.main;
@@ -213,6 +265,17 @@ public class ViseurScript : MonoBehaviour
     private void HideViseur()
     {
         isVisible = false;
+
+        // Activer le cooldown uniquement si le mode visée s'est terminé par timeout
+        if (timeExpired)
+        {
+            // Le temps s'est écoulé, on active le cooldown
+            isCooldownActive = true;
+            int currentLevel = foudre.GetCurrentLevel();
+            cooldownTimer = GetCooldownForLevel(currentLevel);
+            Debug.Log($"Mode visée terminé par timeout, cooldown activé: {cooldownTimer:F1} secondes");
+            timeExpired = false; // Réinitialiser le flag
+        }
 
         // Réinitialiser le minuteur
         targetModeTimer = 0f;
