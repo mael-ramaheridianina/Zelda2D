@@ -25,6 +25,8 @@ public class ViseurScript : MonoBehaviour
     [Header("Target Mode Duration Settings")]
     [SerializeField] private float[] targetModeDurations = { 1.0f, 2.0f, 3.0f }; // Durées pour niveaux 1, 2, 3
     private float targetModeTimer = 0f;
+    private float remainingDuration = 0f;  // Pour stocker le temps restant si sortie manuelle
+    private bool manualExit = false;       // Pour suivre si la sortie était manuelle (touche R)
 
     [Header("Cooldown Settings")]
     [SerializeField] private float[] targetModeCooldowns = { 5.0f, 3.0f, 1.5f }; // Temps d'attente entre utilisations
@@ -108,7 +110,7 @@ public class ViseurScript : MonoBehaviour
             if (foudre != null)
             {
                 int currentLevel = foudre.GetCurrentLevel();
-                float maxDuration = GetTargetModeDurationForLevel(currentLevel);
+                float maxDuration = remainingDuration > 0 ? remainingDuration : GetTargetModeDurationForLevel(currentLevel);
                 
                 targetModeTimer += Time.unscaledDeltaTime; // Utiliser unscaledDeltaTime car le temps est ralenti
                 
@@ -144,6 +146,7 @@ public class ViseurScript : MonoBehaviour
                 // Permettre de quitter manuellement avec R
                 if (Input.GetKeyDown(KeyCode.R))
                 {
+                    manualExit = true; // Marquer que la sortie est manuelle
                     HideViseur();
                 }
             }
@@ -257,14 +260,43 @@ public class ViseurScript : MonoBehaviour
 
         // Réinitialiser le minuteur du mode visé
         targetModeTimer = 0f;
+        
+        // Log pour déboguer
+        Debug.Log($"ShowViseur: manualExit={manualExit}, remainingDuration={remainingDuration:F1}");
+
+        // Pas besoin de modifications supplémentaires ici
+        // Le code actuel devrait fonctionner si manualExit est préservé
 
         // Ajouter le délai de protection pour éviter la double détection de touches
         inputProtectionTimer = inputProtectionTime;
+        
+        // Réinitialiser manualExit APRÈS avoir vérifié son état
+        manualExit = false;
     }
 
     private void HideViseur()
     {
         isVisible = false;
+
+        // Stocker le temps restant si sortie manuelle
+        if (manualExit && !timeExpired)
+        {
+            int currentLevel = foudre.GetCurrentLevel();
+            float maxDuration = remainingDuration > 0 ? remainingDuration : GetTargetModeDurationForLevel(currentLevel);
+            remainingDuration = maxDuration - targetModeTimer;
+            
+            if (remainingDuration < 0.1f) // Éviter des valeurs trop petites
+            {
+                remainingDuration = 0.1f;
+            }
+            
+            Debug.Log($"Sortie manuelle, temps restant stocké: {remainingDuration:F1} secondes");
+        }
+        else
+        {
+            // Si expiration du temps, réinitialiser le temps restant
+            remainingDuration = 0f;
+        }
 
         // Activer le cooldown uniquement si le mode visée s'est terminé par timeout
         if (timeExpired)
@@ -276,6 +308,9 @@ public class ViseurScript : MonoBehaviour
             Debug.Log($"Mode visée terminé par timeout, cooldown activé: {cooldownTimer:F1} secondes");
             timeExpired = false; // Réinitialiser le flag
         }
+
+        // NE PAS réinitialiser manualExit ici
+        // manualExit = false; <-- COMMENTEZ OU SUPPRIMEZ CETTE LIGNE
 
         // Réinitialiser le minuteur
         targetModeTimer = 0f;
