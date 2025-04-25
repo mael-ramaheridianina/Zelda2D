@@ -1081,8 +1081,9 @@ GameObject:
   - component: {fileID: 1438300569}
   - component: {fileID: 1438300571}
   - component: {fileID: 1438300570}
+  - component: {fileID: 1438300572}
   m_Layer: 0
-  m_Name: LImite
+  m_Name: Limite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1168,36 +1169,40 @@ Tilemap:
   m_TileAssetArray:
   - m_RefCount: 0
     m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   m_TileSpriteArray:
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
   m_TileMatrixArray:
   - m_RefCount: 0
     m_Data:
-      e00: 6.129996e+11
+      e00: 2.35e-43
       e01: 0
       e02: 1e-45
       e03: -5.995199e+19
-      e10: 7.3e-44
+      e10: 0
       e11: 0
       e12: 0
       e13: 5.11e-43
       e20: -3.1517982
       e21: -5.995199e+19
-      e22: 2.0468224e+9
-      e23: 6.549736e-19
+      e22: 2.5511157e-29
+      e23: 6.4792106e-19
       e30: 4.5915e-41
       e31: 5.11e-43
-      e32: 5.13e-43
+      e32: 5.16e-43
       e33: 5.13e-43
   m_TileColorArray:
   - m_RefCount: 0
-    m_Data: {r: 6.5497154e-19, g: 6.5497154e-19, b: 6.5497154e-19, a: 6.5497154e-19}
+    m_Data: {r: NaN, g: NaN, b: NaN, a: NaN}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Origin: {x: 0, y: 0, z: 0}
-  m_Size: {x: 21, y: 5, z: 1}
+  m_Origin: {x: 0, y: -3, z: 0}
+  m_Size: {x: 21, y: 8, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -1217,6 +1222,44 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!19719996 &1438300572
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1438300568}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0
+  m_UseDelaunayMesh: 0
 --- !u!114 &1478665459 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3618979241971913275, guid: 528bf6c8867dec54baf0000015093e2c, type: 3}
@@ -1607,8 +1650,16 @@ PrefabInstance:
       value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 3618979241971913275, guid: 528bf6c8867dec54baf0000015093e2c, type: 3}
+      propertyPath: slowMotionTimeScale
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3618979241971913275, guid: 528bf6c8867dec54baf0000015093e2c, type: 3}
+      propertyPath: 'targetModeCooldowns.Array.data[2]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3618979241971913275, guid: 528bf6c8867dec54baf0000015093e2c, type: 3}
       propertyPath: 'targetModeDurations.Array.data[0]'
-      value: 1000
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3618979241971913275, guid: 528bf6c8867dec54baf0000015093e2c, type: 3}
       propertyPath: 'targetModeDurations.Array.data[1]'
@@ -1639,9 +1690,9 @@ SceneRoots:
   - {fileID: 1679765458}
   - {fileID: 1839008436}
   - {fileID: 565858307526118063}
-  - {fileID: 807364225}
   - {fileID: 108760452}
   - {fileID: 1746270391}
   - {fileID: 6960399184271126258}
   - {fileID: 740255872}
   - {fileID: 256352078}
+  - {fileID: 807364225}
